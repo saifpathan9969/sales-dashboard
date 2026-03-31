@@ -38,18 +38,33 @@ initDb().then(async () => {
   if (process.env.NODE_ENV === 'production') {
     console.log('🌱 Running database seed...');
     try {
-      const { exec } = require('child_process');
-      await new Promise((resolve, reject) => {
-        exec('node seed.js', { cwd: __dirname }, (error, stdout, stderr) => {
-          if (error) {
-            console.error('Seed error:', error);
-            reject(error);
-          } else {
-            console.log(stdout);
-            resolve();
-          }
-        });
-      });
+      // Import and run seed directly
+      const bcrypt = require('bcryptjs');
+      const { queryOne, execute } = require('./db');
+      
+      // Create admin user
+      const adminExists = queryOne("SELECT id FROM users WHERE email = 'admin@edos.com'");
+      if (!adminExists) {
+        const adminHash = bcrypt.hashSync('admin123', 10);
+        execute('INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)', 
+          ['Admin User', 'admin@edos.com', adminHash, 'admin']);
+        console.log('  ✓ Admin user created (admin@edos.com / admin123)');
+      } else {
+        console.log('  ✓ Admin user already exists');
+      }
+      
+      // Create demo user
+      const userExists = queryOne("SELECT id FROM users WHERE email = 'user@edos.com'");
+      if (!userExists) {
+        const userHash = bcrypt.hashSync('user123', 10);
+        execute('INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)', 
+          ['Demo User', 'user@edos.com', userHash, 'user']);
+        console.log('  ✓ Demo user created (user@edos.com / user123)');
+      } else {
+        console.log('  ✓ Demo user already exists');
+      }
+      
+      console.log('✅ Database seeded successfully!');
     } catch (err) {
       console.error('Failed to seed database:', err);
     }
