@@ -1,0 +1,161 @@
+defect_id,batch_id,production_date,product_line,defect_type,severity,defect_count,inspector,shift
+1,BAT-219,2025-05-23,Line A,Crack,Low,9,Inspector A,Morning
+2,BAT-268,2025-06-17,Line B,Loose Part,Low,5,Inspector C,Evening
+3,BAT-230,2025-01-30,Line A,Scratch,Critical,2,Inspector B,Night
+4,BAT-277,2025-01-29,Line B,Packaging Error,Medium,2,Inspector A,Night
+5,BAT-217,2025-12-26,Line A,Misalignment,Critical,6,Inspector C,Night
+6,BAT-233,2025-03-27,Line B,Misalignment,High,12,Inspector A,Morning
+7,BAT-242,2025-08-08,Line B,Loose Part,Low,5,Inspector C,Night
+8,BAT-280,2025-02-09,Line B,Discoloration,High,1,Inspector B,Night
+9,BAT-221,2025-07-08,Line A,Crack,Low,10,Inspector C,Night
+10,BAT-214,2025-04-27,Line C,Loose Part,Low,1,Inspector A,Morning
+11,BAT-205,2025-08-30,Line B,Discoloration,Medium,3,Inspector A,Night
+12,BAT-253,2025-04-25,Line B,Misalignment,Critical,12,Inspector B,Evening
+13,BAT-209,2025-10-20,Line B,Scratch,Low,3,Inspector A,Night
+14,BAT-205,2025-07-25,Line A,Discoloration,High,5,Inspector B,Morning
+15,BAT-270,2025-08-22,Line A,Crack,Medium,5,Inspector C,Evening
+16,BAT-279,2025-05-05,Line B,Crack,Critical,4,Inspector C,Night
+17,BAT-231,2025-03-19,Line A,Discoloration,Low,4,Inspector C,Evening
+18,BAT-201,2025-06-21,Line A,Packaging Error,Critical,12,Inspector C,Evening
+19,BAT-213,2025-04-16,Line C,Misalignment,Critical,8,Inspector A,Morning
+20,BAT-235,2025-02-17,Line A,Misalignment,Critical,12,Inspector B,Evening
+21,BAT-210,2025-10-25,Line A,Loose Part,Medium,11,Inspector B,Morning
+22,BAT-275,2025-10-18,Line A,Discoloration,Medium,4,Inspector B,Evening
+23,BAT-240,2025-07-21,Line C,Packaging Error,High,6,Inspector B,Evening
+24,BAT-229,2025-02-08,Line A,Misalignment,Low,3,Inspector A,Morning
+25,BAT-257,2025-08-27,Line B,Discoloration,Low,9,Inspector B,Morning
+26,BAT-257,2025-06-07,Line B,Crack,Low,2,Inspector A,Night
+27,BAT-238,2025-12-27,Line C,Loose Part,Low,4,Inspector B,Morning
+28,BAT-211,2025-12-31,Line A,Crack,Critical,9,Inspector A,Night
+29,BAT-238,2025-05-14,Line A,Scratch,Critical,8,Inspector C,Night
+30,BAT-270,2025-05-08,Line A,Discoloration,Low,3,Inspector A,Morning
+31,BAT-207,2025-04-24,Line A,Misalignment,Critical,6,Inspector C,Night
+32,BAT-210,2025-10-26,Line C,Crack,Low,1,Inspector A,Morning
+33,BAT-256,2025-03-07,Line A,Crack,Low,1,Inspector B,Morning
+34,BAT-221,2025-10-21,Line B,Packaging Error,Critical,8,Inspector A,Evening
+35,BAT-254,2025-03-30,Line B,Misalignment,Medium,5,Inspector B,Evening
+36,BAT-219,2025-01-18,Line C,Loose Part,Medium,11,Inspector B,Evening
+37,BAT-252,2025-10-09,Line B,Scratch,Low,5,Inspector B,Morning
+38,BAT-253,2025-04-13,Line C,Loose Part,Medium,11,Inspector C,Morning
+39,BAT-248,2025-07-03,Line B,Loose Part,Critical,6,Inspector C,Night
+40,BAT-241,2025-07-18,Line B,Misalignment,Low,6,Inspector C,Morning
+41,BAT-203,2025-05-24,Line A,Discoloration,High,10,Inspector A,Morning
+42,BAT-212,2025-05-07,Line C,Misalignment,High,9,Inspector C,Morning
+43,BAT-228,2025-10-22,Line B,Crack,Medium,3,Inspector A,Night
+44,BAT-240,2025-12-24,Line B,Loose Part,Low,12,Inspector C,Evening
+45,BAT-272,2025-10-16,Line A,Loose Part,Medium,8,Inspector C,Evening
+46,BAT-222,2025-09-09,Line A,Scratch,Low,4,Inspector C,Morning
+47,BAT-202,2025-09-27,Line B,Scratch,High,10,Inspector A,Morning
+48,BAT-243,2025-04-01,Line B,Scratch,Low,3,Inspector C,Night
+49,BAT-218,2025-02-26,Line C,Crack,Low,6,Inspector C,Night
+50,BAT-250,2025-10-28,Line A,Crack,High,6,Inspector A,Morning
+51,BAT-255,2025-11-24,Line B,Packaging Error,High,3,Inspector C,Night
+52,BAT-278,2025-07-02,Line A,Packaging Error,Medium,7,Inspector B,Night
+53,BAT-237,2025-03-07,Line A,Packaging Error,Low,12,Inspector C,Evening
+54,BAT-272,2025-01-17,Line A,Loose Part,High,10,Inspector A,Night
+55,BAT-272,2025-02-23,Line B,Misalignment,High,12,Inspector A,Morning
+56,BAT-244,2025-06-13,Line A,Packaging Error,Low,12,Inspector C,Night
+57,BAT-242,2025-08-17,Line A,Crack,Medium,4,Inspector C,Morning
+58,BAT-244,2025-05-12,Line A,Packaging Error,Low,1,Inspector B,Evening
+59,BAT-253,2025-03-27,Line B,Discoloration,Critical,6,Inspector C,Evening
+60,BAT-212,2025-09-03,Line C,Packaging Error,Medium,3,Inspector B,Morning
+61,BAT-204,2025-05-31,Line A,Crack,High,2,Inspector A,Evening
+62,BAT-221,2025-07-12,Line A,Packaging Error,Low,9,Inspector A,Evening
+63,BAT-276,2025-11-11,Line B,Packaging Error,Low,7,Inspector C,Morning
+64,BAT-277,2025-08-11,Line A,Scratch,Low,6,Inspector A,Morning
+65,BAT-252,2025-12-23,Line C,Packaging Error,High,11,Inspector B,Evening
+66,BAT-230,2025-02-19,Line A,Discoloration,Critical,3,Inspector A,Evening
+67,BAT-200,2025-08-07,Line A,Crack,Critical,4,Inspector A,Morning
+68,BAT-226,2025-03-29,Line C,Crack,Low,8,Inspector A,Evening
+69,BAT-250,2025-08-30,Line B,Packaging Error,High,2,Inspector C,Night
+70,BAT-249,2025-04-05,Line B,Discoloration,High,3,Inspector B,Morning
+71,BAT-233,2025-08-14,Line B,Crack,Medium,5,Inspector C,Morning
+72,BAT-219,2025-12-23,Line C,Scratch,Low,11,Inspector B,Night
+73,BAT-252,2025-10-29,Line A,Loose Part,Low,7,Inspector C,Evening
+74,BAT-268,2025-12-18,Line B,Loose Part,Medium,8,Inspector B,Morning
+75,BAT-250,2025-01-18,Line C,Loose Part,Medium,2,Inspector B,Morning
+76,BAT-221,2025-04-19,Line A,Misalignment,Low,7,Inspector A,Night
+77,BAT-255,2025-04-14,Line C,Misalignment,High,6,Inspector C,Morning
+78,BAT-211,2025-07-18,Line C,Discoloration,High,5,Inspector C,Evening
+79,BAT-201,2025-12-25,Line C,Loose Part,Critical,2,Inspector B,Morning
+80,BAT-218,2025-10-18,Line C,Loose Part,Low,2,Inspector C,Morning
+81,BAT-236,2025-10-02,Line B,Discoloration,High,7,Inspector C,Evening
+82,BAT-273,2025-11-08,Line B,Scratch,Medium,5,Inspector B,Morning
+83,BAT-279,2025-11-08,Line C,Packaging Error,Critical,1,Inspector B,Evening
+84,BAT-230,2025-01-26,Line C,Discoloration,High,6,Inspector A,Evening
+85,BAT-238,2025-06-09,Line B,Discoloration,Low,4,Inspector A,Evening
+86,BAT-256,2025-06-14,Line B,Packaging Error,Critical,10,Inspector C,Morning
+87,BAT-224,2025-08-15,Line A,Discoloration,Critical,9,Inspector B,Morning
+88,BAT-265,2025-03-23,Line A,Crack,Critical,3,Inspector C,Night
+89,BAT-203,2025-03-30,Line A,Misalignment,Low,4,Inspector A,Evening
+90,BAT-206,2025-07-04,Line C,Misalignment,High,6,Inspector B,Night
+91,BAT-250,2025-11-22,Line A,Packaging Error,Low,4,Inspector B,Evening
+92,BAT-276,2025-08-17,Line A,Discoloration,High,6,Inspector A,Evening
+93,BAT-211,2025-05-26,Line A,Discoloration,Low,3,Inspector C,Morning
+94,BAT-228,2025-11-28,Line A,Packaging Error,Medium,5,Inspector C,Evening
+95,BAT-265,2025-01-11,Line C,Scratch,Critical,3,Inspector C,Morning
+96,BAT-276,2025-01-05,Line A,Crack,High,12,Inspector C,Night
+97,BAT-235,2025-08-05,Line B,Crack,Critical,5,Inspector A,Evening
+98,BAT-238,2025-12-13,Line C,Loose Part,Critical,10,Inspector A,Morning
+99,BAT-265,2025-12-06,Line B,Loose Part,High,5,Inspector C,Morning
+100,BAT-261,2025-02-02,Line B,Crack,High,5,Inspector B,Night
+101,BAT-238,2025-04-07,Line A,Loose Part,Medium,1,Inspector C,Evening
+102,BAT-240,2025-12-15,Line A,Packaging Error,Low,11,Inspector B,Evening
+103,BAT-233,2025-08-03,Line B,Discoloration,Low,10,Inspector C,Night
+104,BAT-224,2025-06-25,Line C,Packaging Error,Medium,11,Inspector C,Night
+105,BAT-260,2025-12-10,Line B,Loose Part,High,3,Inspector C,Night
+106,BAT-223,2025-05-31,Line A,Discoloration,Medium,12,Inspector B,Night
+107,BAT-271,2025-04-04,Line C,Crack,Low,4,Inspector B,Morning
+108,BAT-239,2025-08-04,Line B,Crack,High,10,Inspector B,Evening
+109,BAT-215,2025-08-29,Line A,Packaging Error,Low,8,Inspector A,Night
+110,BAT-215,2025-12-15,Line B,Loose Part,High,7,Inspector A,Morning
+111,BAT-217,2025-04-13,Line B,Discoloration,Critical,3,Inspector B,Night
+112,BAT-223,2025-02-11,Line B,Crack,Medium,6,Inspector C,Morning
+113,BAT-200,2025-08-20,Line B,Misalignment,Medium,10,Inspector A,Evening
+114,BAT-211,2025-03-08,Line C,Discoloration,Critical,7,Inspector B,Evening
+115,BAT-249,2025-01-03,Line A,Loose Part,Medium,12,Inspector B,Morning
+116,BAT-241,2025-09-29,Line A,Scratch,Low,11,Inspector C,Morning
+117,BAT-228,2025-12-22,Line B,Crack,Medium,2,Inspector B,Night
+118,BAT-275,2025-06-06,Line A,Scratch,Low,5,Inspector B,Evening
+119,BAT-266,2025-11-02,Line C,Crack,Critical,11,Inspector A,Evening
+120,BAT-262,2025-07-03,Line A,Misalignment,Critical,1,Inspector A,Morning
+121,BAT-216,2025-04-19,Line C,Scratch,Medium,2,Inspector B,Night
+122,BAT-204,2025-07-12,Line C,Crack,Low,10,Inspector A,Night
+123,BAT-213,2025-12-01,Line A,Scratch,Low,7,Inspector B,Evening
+124,BAT-215,2025-10-08,Line B,Discoloration,Medium,4,Inspector C,Night
+125,BAT-280,2025-01-05,Line B,Discoloration,Low,11,Inspector C,Evening
+126,BAT-279,2025-11-07,Line C,Misalignment,Critical,2,Inspector C,Night
+127,BAT-279,2025-03-02,Line B,Scratch,Low,8,Inspector A,Night
+128,BAT-225,2025-05-15,Line C,Misalignment,High,12,Inspector B,Evening
+129,BAT-220,2025-01-21,Line C,Discoloration,Medium,12,Inspector B,Evening
+130,BAT-230,2025-01-02,Line A,Packaging Error,Low,2,Inspector C,Night
+131,BAT-263,2025-03-18,Line A,Loose Part,Low,12,Inspector C,Morning
+132,BAT-232,2025-11-26,Line A,Discoloration,High,5,Inspector B,Morning
+133,BAT-212,2025-03-31,Line A,Crack,High,11,Inspector B,Evening
+134,BAT-214,2025-02-18,Line A,Scratch,Medium,11,Inspector C,Morning
+135,BAT-242,2025-07-03,Line B,Loose Part,High,12,Inspector A,Evening
+136,BAT-243,2025-04-04,Line A,Discoloration,Critical,8,Inspector B,Evening
+137,BAT-261,2025-08-04,Line C,Misalignment,Low,3,Inspector C,Night
+138,BAT-207,2025-03-23,Line A,Discoloration,Critical,10,Inspector C,Evening
+139,BAT-223,2025-11-09,Line B,Crack,Low,11,Inspector C,Morning
+140,BAT-261,2025-09-07,Line A,Discoloration,Critical,1,Inspector A,Evening
+141,BAT-240,2025-01-07,Line C,Packaging Error,Medium,11,Inspector B,Night
+142,BAT-266,2025-12-19,Line C,Loose Part,Low,7,Inspector C,Night
+143,BAT-231,2025-09-04,Line B,Packaging Error,Critical,3,Inspector C,Night
+144,BAT-206,2025-01-06,Line C,Misalignment,Critical,8,Inspector A,Morning
+145,BAT-262,2025-06-14,Line A,Crack,High,1,Inspector C,Morning
+146,BAT-270,2025-11-26,Line B,Discoloration,Medium,2,Inspector B,Evening
+147,BAT-273,2025-08-18,Line A,Discoloration,Critical,6,Inspector A,Evening
+148,BAT-202,2025-02-22,Line B,Discoloration,Low,9,Inspector C,Morning
+149,BAT-211,2025-11-06,Line C,Packaging Error,High,9,Inspector C,Morning
+150,BAT-258,2025-06-24,Line B,Scratch,Medium,8,Inspector B,Night
+151,BAT-279,2025-11-04,Line B,Packaging Error,High,12,Inspector B,Morning
+152,BAT-212,2025-12-04,Line A,Scratch,High,6,Inspector C,Evening
+153,BAT-270,2025-09-25,Line B,Packaging Error,Low,1,Inspector A,Evening
+154,BAT-217,2025-07-29,Line A,Crack,Medium,4,Inspector A,Evening
+155,BAT-227,2025-08-23,Line A,Packaging Error,High,2,Inspector B,Morning
+156,BAT-275,2025-03-05,Line B,Discoloration,Medium,8,Inspector A,Night
+157,BAT-206,2025-10-11,Line B,Loose Part,Critical,9,Inspector A,Night
+158,BAT-274,2025-03-30,Line C,Misalignment,Low,7,Inspector C,Night
+159,BAT-277,2025-06-14,Line C,Discoloration,Critical,10,Inspector C,Morning
+160,BAT-235,2025-07-23,Line B,Crack,Critical,3,Inspector A,Evening

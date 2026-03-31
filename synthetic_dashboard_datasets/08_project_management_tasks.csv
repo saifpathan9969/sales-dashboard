@@ -1,0 +1,141 @@
+task_id,project_name,task_name,owner,status,priority,start_date,due_date,completion_percent
+1,Delta,Task 1,Chris,Completed,Medium,2025-12-02,2025-12-27,100
+2,Catalyst,Task 2,Chris,Blocked,Low,2025-06-06,2025-06-21,66
+3,Beacon,Task 3,Fatima,Blocked,High,2025-03-17,2025-04-13,26
+4,Apollo,Task 4,Alex,In Progress,High,2025-04-04,2025-04-20,30
+5,Beacon,Task 5,Bianca,Completed,Low,2025-10-22,2025-11-04,100
+6,Delta,Task 6,Elliot,Blocked,Medium,2025-12-07,2026-01-01,52
+7,Delta,Task 7,Bianca,Not Started,Critical,2025-10-01,2025-10-25,0
+8,Catalyst,Task 8,Fatima,Not Started,High,2025-06-13,2025-06-27,0
+9,Catalyst,Task 9,Fatima,In Progress,Low,2025-08-31,2025-09-23,82
+10,Catalyst,Task 10,Alex,In Progress,Critical,2025-09-03,2025-09-10,80
+11,Catalyst,Task 11,Alex,Completed,Medium,2025-11-13,2025-12-02,100
+12,Apollo,Task 12,Alex,In Progress,Critical,2025-10-26,2025-12-03,45
+13,Catalyst,Task 13,Elliot,Completed,Low,2025-12-13,2025-12-23,100
+14,Catalyst,Task 14,Divya,Completed,High,2025-12-08,2026-01-05,100
+15,Delta,Task 15,Elliot,Blocked,Low,2025-01-07,2025-01-30,44
+16,Beacon,Task 16,Fatima,Completed,Critical,2025-04-21,2025-05-24,100
+17,Catalyst,Task 17,Divya,Not Started,High,2025-08-01,2025-08-14,0
+18,Delta,Task 18,Fatima,Completed,High,2025-02-03,2025-03-17,100
+19,Beacon,Task 19,Bianca,Completed,Critical,2025-08-01,2025-08-17,100
+20,Catalyst,Task 20,Divya,Completed,Critical,2025-05-29,2025-07-08,100
+21,Catalyst,Task 21,Fatima,Not Started,Critical,2025-04-25,2025-05-01,0
+22,Beacon,Task 22,Alex,Completed,Low,2025-03-05,2025-03-28,100
+23,Delta,Task 23,Elliot,Not Started,Critical,2025-05-22,2025-06-27,0
+24,Apollo,Task 24,Chris,Completed,Medium,2025-05-13,2025-06-27,100
+25,Beacon,Task 25,Chris,In Progress,Medium,2025-10-25,2025-11-02,50
+26,Apollo,Task 26,Chris,Blocked,High,2025-01-28,2025-02-19,50
+27,Beacon,Task 27,Alex,Not Started,Medium,2025-09-29,2025-11-13,0
+28,Catalyst,Task 28,Alex,Blocked,High,2025-10-06,2025-10-31,39
+29,Catalyst,Task 29,Divya,In Progress,Critical,2025-03-15,2025-03-20,76
+30,Beacon,Task 30,Bianca,Not Started,Low,2025-06-24,2025-07-09,0
+31,Apollo,Task 31,Divya,Not Started,High,2025-08-02,2025-09-05,0
+32,Beacon,Task 32,Fatima,In Progress,High,2025-06-09,2025-07-07,66
+33,Beacon,Task 33,Chris,In Progress,Medium,2025-01-15,2025-01-27,26
+34,Apollo,Task 34,Alex,Not Started,Critical,2025-04-18,2025-05-01,0
+35,Apollo,Task 35,Divya,In Progress,Low,2025-08-09,2025-08-16,23
+36,Apollo,Task 36,Alex,Not Started,Medium,2025-05-10,2025-05-17,0
+37,Apollo,Task 37,Bianca,In Progress,High,2025-10-28,2025-11-14,54
+38,Beacon,Task 38,Elliot,Blocked,Low,2025-10-24,2025-11-20,69
+39,Beacon,Task 39,Chris,Not Started,Medium,2025-02-20,2025-04-03,0
+40,Delta,Task 40,Chris,Not Started,Medium,2025-10-03,2025-10-08,0
+41,Delta,Task 41,Bianca,In Progress,Medium,2025-08-14,2025-08-25,55
+42,Apollo,Task 42,Elliot,Blocked,Medium,2025-07-28,2025-08-09,64
+43,Apollo,Task 43,Chris,Blocked,Critical,2025-09-11,2025-10-09,10
+44,Delta,Task 44,Bianca,Blocked,Critical,2025-03-01,2025-03-30,44
+45,Catalyst,Task 45,Bianca,In Progress,Low,2025-05-29,2025-06-30,18
+46,Apollo,Task 46,Alex,Not Started,Medium,2025-12-12,2026-01-17,0
+47,Catalyst,Task 47,Bianca,Not Started,High,2025-07-22,2025-08-21,0
+48,Delta,Task 48,Fatima,Completed,Critical,2025-04-13,2025-05-26,100
+49,Delta,Task 49,Fatima,Blocked,Critical,2025-05-23,2025-07-04,50
+50,Apollo,Task 50,Alex,Blocked,High,2025-09-06,2025-10-13,63
+51,Apollo,Task 51,Alex,In Progress,Low,2025-09-08,2025-10-14,90
+52,Catalyst,Task 52,Bianca,Not Started,High,2025-02-04,2025-03-12,0
+53,Delta,Task 53,Bianca,Not Started,High,2025-11-15,2025-12-29,0
+54,Catalyst,Task 54,Elliot,Completed,Low,2025-12-05,2026-01-10,100
+55,Catalyst,Task 55,Divya,Not Started,Critical,2025-01-17,2025-02-18,0
+56,Beacon,Task 56,Divya,Not Started,Critical,2025-08-24,2025-08-31,0
+57,Delta,Task 57,Fatima,Completed,Critical,2025-03-10,2025-04-03,100
+58,Delta,Task 58,Chris,In Progress,Critical,2025-09-01,2025-10-11,74
+59,Apollo,Task 59,Alex,Blocked,Low,2025-10-30,2025-11-28,46
+60,Catalyst,Task 60,Divya,Blocked,Low,2025-03-07,2025-04-04,8
+61,Apollo,Task 61,Fatima,Blocked,Medium,2025-08-08,2025-09-04,49
+62,Apollo,Task 62,Chris,Blocked,Low,2025-05-07,2025-05-27,15
+63,Apollo,Task 63,Divya,Not Started,Critical,2025-06-22,2025-07-07,0
+64,Delta,Task 64,Elliot,Completed,Low,2025-10-18,2025-11-24,100
+65,Delta,Task 65,Alex,Completed,Medium,2025-06-12,2025-07-11,100
+66,Catalyst,Task 66,Divya,Blocked,Medium,2025-06-22,2025-07-28,43
+67,Catalyst,Task 67,Chris,Not Started,Low,2025-09-12,2025-10-27,0
+68,Apollo,Task 68,Elliot,Completed,High,2025-06-02,2025-07-13,100
+69,Catalyst,Task 69,Alex,Completed,High,2025-05-20,2025-05-29,100
+70,Beacon,Task 70,Divya,Completed,Critical,2025-09-16,2025-10-10,100
+71,Apollo,Task 71,Fatima,Completed,Medium,2025-05-09,2025-06-22,100
+72,Delta,Task 72,Elliot,In Progress,Low,2025-10-23,2025-11-28,69
+73,Beacon,Task 73,Bianca,Blocked,High,2025-09-25,2025-10-12,23
+74,Delta,Task 74,Chris,Blocked,High,2025-08-11,2025-09-11,31
+75,Delta,Task 75,Bianca,Blocked,Low,2025-11-27,2025-12-12,35
+76,Delta,Task 76,Divya,Not Started,Critical,2025-03-18,2025-04-04,0
+77,Beacon,Task 77,Alex,In Progress,High,2025-08-05,2025-08-12,30
+78,Apollo,Task 78,Alex,In Progress,Low,2025-05-23,2025-07-02,15
+79,Catalyst,Task 79,Fatima,Blocked,Low,2025-06-10,2025-07-23,57
+80,Apollo,Task 80,Elliot,In Progress,High,2025-07-23,2025-08-05,24
+81,Catalyst,Task 81,Chris,In Progress,Critical,2025-09-12,2025-09-22,86
+82,Beacon,Task 82,Bianca,In Progress,High,2025-05-01,2025-06-02,28
+83,Delta,Task 83,Elliot,Blocked,High,2025-08-14,2025-09-14,12
+84,Catalyst,Task 84,Bianca,Completed,High,2025-02-27,2025-03-24,100
+85,Apollo,Task 85,Fatima,Blocked,Medium,2025-09-01,2025-09-29,9
+86,Apollo,Task 86,Elliot,Completed,Medium,2025-05-10,2025-06-19,100
+87,Catalyst,Task 87,Alex,Not Started,Medium,2025-08-15,2025-09-13,0
+88,Delta,Task 88,Alex,In Progress,High,2025-06-02,2025-06-20,66
+89,Delta,Task 89,Alex,Completed,Medium,2025-02-11,2025-03-19,100
+90,Catalyst,Task 90,Divya,Not Started,Low,2025-05-14,2025-06-20,0
+91,Delta,Task 91,Bianca,Completed,High,2025-01-27,2025-02-12,100
+92,Beacon,Task 92,Elliot,Not Started,Medium,2025-06-10,2025-07-21,0
+93,Beacon,Task 93,Chris,Blocked,Medium,2025-11-01,2025-12-02,66
+94,Delta,Task 94,Chris,Blocked,Medium,2025-10-31,2025-11-25,15
+95,Beacon,Task 95,Alex,In Progress,Critical,2025-07-21,2025-08-19,12
+96,Delta,Task 96,Elliot,In Progress,High,2025-04-12,2025-05-03,16
+97,Apollo,Task 97,Fatima,Blocked,Critical,2025-03-18,2025-03-28,20
+98,Beacon,Task 98,Chris,Not Started,High,2025-08-21,2025-09-26,0
+99,Beacon,Task 99,Chris,In Progress,Medium,2025-09-11,2025-10-10,65
+100,Catalyst,Task 100,Chris,Completed,Medium,2025-08-03,2025-08-19,100
+101,Apollo,Task 101,Alex,In Progress,Critical,2025-11-13,2025-12-16,57
+102,Delta,Task 102,Fatima,Completed,High,2025-03-10,2025-04-04,100
+103,Beacon,Task 103,Divya,Not Started,High,2025-02-07,2025-02-18,0
+104,Delta,Task 104,Chris,Not Started,Critical,2025-11-07,2025-12-20,0
+105,Beacon,Task 105,Chris,In Progress,Medium,2025-12-10,2026-01-07,81
+106,Apollo,Task 106,Chris,Blocked,Critical,2025-09-15,2025-10-21,21
+107,Beacon,Task 107,Divya,Not Started,High,2025-03-14,2025-04-04,0
+108,Catalyst,Task 108,Divya,Blocked,Medium,2025-07-04,2025-08-05,38
+109,Apollo,Task 109,Bianca,In Progress,Medium,2025-06-11,2025-07-17,81
+110,Catalyst,Task 110,Bianca,In Progress,Critical,2025-01-28,2025-02-16,14
+111,Catalyst,Task 111,Fatima,Completed,Critical,2025-08-12,2025-08-24,100
+112,Catalyst,Task 112,Alex,Not Started,Medium,2025-08-23,2025-09-28,0
+113,Beacon,Task 113,Elliot,In Progress,Low,2025-05-26,2025-06-11,75
+114,Beacon,Task 114,Divya,In Progress,Low,2025-09-27,2025-11-07,63
+115,Catalyst,Task 115,Elliot,Blocked,Low,2025-06-18,2025-06-24,55
+116,Delta,Task 116,Divya,Not Started,High,2025-06-15,2025-06-29,0
+117,Catalyst,Task 117,Fatima,Blocked,Medium,2025-11-01,2025-11-06,62
+118,Apollo,Task 118,Elliot,Blocked,Critical,2025-04-19,2025-04-27,12
+119,Delta,Task 119,Alex,Blocked,Low,2025-02-17,2025-03-19,35
+120,Beacon,Task 120,Alex,Completed,High,2025-04-17,2025-05-02,100
+121,Catalyst,Task 121,Fatima,Blocked,Low,2025-09-09,2025-10-11,21
+122,Delta,Task 122,Divya,In Progress,High,2025-07-08,2025-08-14,72
+123,Catalyst,Task 123,Elliot,Completed,Medium,2025-10-16,2025-11-28,100
+124,Catalyst,Task 124,Divya,Completed,Medium,2025-08-11,2025-09-25,100
+125,Catalyst,Task 125,Divya,Completed,Critical,2025-11-28,2025-12-12,100
+126,Catalyst,Task 126,Bianca,Blocked,Critical,2025-02-10,2025-03-17,21
+127,Apollo,Task 127,Elliot,Not Started,Low,2025-06-01,2025-07-12,0
+128,Catalyst,Task 128,Chris,Completed,High,2025-09-19,2025-10-21,100
+129,Beacon,Task 129,Bianca,Not Started,Critical,2025-10-27,2025-11-06,0
+130,Delta,Task 130,Fatima,Completed,Critical,2025-01-24,2025-02-03,100
+131,Beacon,Task 131,Alex,Blocked,High,2025-11-16,2025-12-07,32
+132,Apollo,Task 132,Divya,Completed,Low,2025-12-11,2025-12-22,100
+133,Delta,Task 133,Chris,Completed,High,2025-01-07,2025-01-22,100
+134,Beacon,Task 134,Alex,Blocked,Medium,2025-12-11,2026-01-10,21
+135,Delta,Task 135,Fatima,In Progress,Medium,2025-02-27,2025-03-05,13
+136,Apollo,Task 136,Chris,Completed,Critical,2025-11-29,2025-12-19,100
+137,Beacon,Task 137,Bianca,Completed,Critical,2025-03-17,2025-04-21,100
+138,Beacon,Task 138,Chris,Not Started,Critical,2025-09-06,2025-10-11,0
+139,Delta,Task 139,Divya,Not Started,High,2025-01-27,2025-02-22,0
+140,Delta,Task 140,Bianca,Completed,Low,2025-01-19,2025-02-24,100

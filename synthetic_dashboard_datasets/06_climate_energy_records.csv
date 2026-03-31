@@ -1,0 +1,145 @@
+record_id,site_name,energy_source,consumption_kwh,emissions_kg_co2e,renewable_flag,record_date
+1,Bristol Site,Solar,2260.8,45.2,Yes,2025-01-10
+2,Bristol Site,Wind,1915.7,19.2,Yes,2025-09-27
+3,Oxford Office,Grid Electricity,906.8,208.6,No,2025-05-26
+4,Bristol Site,Solar,2550.7,51.0,Yes,2025-05-19
+5,Oxford Office,Grid Electricity,1552.1,357.0,No,2025-02-04
+6,Bristol Site,Wind,2153.9,21.5,Yes,2025-12-04
+7,Oxford Office,Natural Gas,2782.0,528.6,No,2025-05-30
+8,Manchester Office,Wind,832.0,8.3,Yes,2025-09-18
+9,Manchester Office,Grid Electricity,2903.9,667.9,No,2025-11-02
+10,Oxford Office,Diesel Generator,391.1,215.1,No,2025-09-14
+11,Bristol Site,Wind,1846.9,18.5,Yes,2025-01-12
+12,Bristol Site,Grid Electricity,882.0,202.9,No,2025-06-06
+13,Bristol Site,Natural Gas,1629.0,309.5,No,2025-03-22
+14,Manchester Office,Grid Electricity,1188.1,273.3,No,2025-07-01
+15,Bristol Site,Natural Gas,847.5,161.0,No,2025-05-22
+16,Manchester Office,Grid Electricity,2047.4,470.9,No,2025-01-16
+17,Oxford Office,Diesel Generator,3043.3,1673.8,No,2025-03-19
+18,Bristol Site,Natural Gas,2883.3,547.8,No,2025-03-12
+19,Bristol Site,Grid Electricity,2368.1,544.7,No,2025-12-14
+20,Bristol Site,Diesel Generator,2807.9,1544.3,No,2025-04-27
+21,Oxford Office,Wind,860.3,8.6,Yes,2025-08-07
+22,Manchester Office,Natural Gas,2922.0,555.2,No,2025-08-18
+23,Bristol Site,Diesel Generator,525.9,289.2,No,2025-03-12
+24,Oxford Office,Diesel Generator,1787.4,983.1,No,2025-03-12
+25,Bristol Site,Natural Gas,2240.7,425.7,No,2025-03-11
+26,Oxford Office,Wind,3186.7,31.9,Yes,2025-12-02
+27,Manchester Office,Diesel Generator,2944.7,1619.6,No,2025-02-04
+28,Bristol Site,Diesel Generator,1761.5,968.8,No,2025-03-02
+29,Oxford Office,Solar,1098.2,22.0,Yes,2025-01-16
+30,Manchester Office,Natural Gas,2830.8,537.9,No,2025-07-30
+31,Bristol Site,Natural Gas,1484.5,282.1,No,2025-05-21
+32,Oxford Office,Solar,2519.7,50.4,Yes,2025-03-09
+33,Bristol Site,Solar,200.7,4.0,Yes,2025-11-12
+34,Bristol Site,Natural Gas,1985.3,377.2,No,2025-04-29
+35,Bristol Site,Diesel Generator,835.1,459.3,No,2025-01-14
+36,Manchester Office,Natural Gas,364.8,69.3,No,2025-03-10
+37,Manchester Office,Diesel Generator,2726.1,1499.4,No,2025-12-31
+38,Manchester Office,Natural Gas,686.6,130.5,No,2025-09-09
+39,Oxford Office,Wind,543.5,5.4,Yes,2025-04-26
+40,Oxford Office,Grid Electricity,1378.5,317.1,No,2025-05-19
+41,Bristol Site,Wind,805.5,8.1,Yes,2025-04-14
+42,Manchester Office,Solar,323.7,6.5,Yes,2025-11-12
+43,Manchester Office,Wind,2238.6,22.4,Yes,2025-05-07
+44,Oxford Office,Wind,1367.0,13.7,Yes,2025-11-08
+45,Manchester Office,Wind,2338.2,23.4,Yes,2025-11-10
+46,Bristol Site,Diesel Generator,1948.9,1071.9,No,2025-11-25
+47,Manchester Office,Grid Electricity,1723.6,396.4,No,2025-08-22
+48,Oxford Office,Grid Electricity,2823.6,649.4,No,2025-09-23
+49,Bristol Site,Diesel Generator,1338.5,736.2,No,2025-01-21
+50,Bristol Site,Diesel Generator,1313.2,722.3,No,2025-01-26
+51,Manchester Office,Solar,1016.8,20.3,Yes,2025-06-05
+52,Manchester Office,Natural Gas,1540.9,292.8,No,2025-05-31
+53,Bristol Site,Diesel Generator,2950.6,1622.8,No,2025-09-22
+54,Bristol Site,Solar,1547.8,31.0,Yes,2025-08-20
+55,Oxford Office,Grid Electricity,2345.8,539.5,No,2025-04-03
+56,Bristol Site,Diesel Generator,3008.6,1654.7,No,2025-10-07
+57,Manchester Office,Solar,1330.6,26.6,Yes,2025-08-19
+58,Bristol Site,Grid Electricity,670.9,154.3,No,2025-12-31
+59,Oxford Office,Solar,2838.2,56.8,Yes,2025-05-09
+60,Bristol Site,Natural Gas,2250.5,427.6,No,2025-03-25
+61,Bristol Site,Grid Electricity,400.9,92.2,No,2025-08-19
+62,Bristol Site,Natural Gas,382.7,72.7,No,2025-07-16
+63,Oxford Office,Diesel Generator,2005.2,1102.9,No,2025-07-13
+64,Oxford Office,Diesel Generator,1292.3,710.8,No,2025-06-21
+65,Oxford Office,Diesel Generator,2803.6,1542.0,No,2025-03-25
+66,Bristol Site,Solar,670.9,13.4,Yes,2025-01-27
+67,Bristol Site,Wind,1068.8,10.7,Yes,2025-08-17
+68,Oxford Office,Natural Gas,2049.5,389.4,No,2025-03-09
+69,Manchester Office,Solar,130.9,2.6,Yes,2025-01-07
+70,Manchester Office,Wind,1652.7,16.5,Yes,2025-10-06
+71,Manchester Office,Grid Electricity,1992.6,458.3,No,2025-05-02
+72,Manchester Office,Solar,1933.7,38.7,Yes,2025-08-21
+73,Bristol Site,Wind,1481.0,14.8,Yes,2025-11-04
+74,Bristol Site,Grid Electricity,873.7,201.0,No,2025-05-23
+75,Oxford Office,Diesel Generator,2056.2,1130.9,No,2025-01-26
+76,Bristol Site,Solar,576.6,11.5,Yes,2025-06-28
+77,Oxford Office,Grid Electricity,567.8,130.6,No,2025-12-08
+78,Manchester Office,Diesel Generator,2701.1,1485.6,No,2025-06-19
+79,Manchester Office,Grid Electricity,271.0,62.3,No,2025-04-02
+80,Bristol Site,Solar,2190.0,43.8,Yes,2025-12-05
+81,Bristol Site,Diesel Generator,1882.6,1035.4,No,2025-04-01
+82,Manchester Office,Wind,2428.0,24.3,Yes,2025-01-19
+83,Manchester Office,Grid Electricity,2487.0,572.0,No,2025-07-08
+84,Manchester Office,Wind,2646.4,26.5,Yes,2025-10-09
+85,Oxford Office,Grid Electricity,1021.9,235.0,No,2025-03-04
+86,Manchester Office,Natural Gas,1134.0,215.5,No,2025-09-26
+87,Bristol Site,Solar,2263.2,45.3,Yes,2025-01-30
+88,Bristol Site,Grid Electricity,1879.8,432.4,No,2025-09-28
+89,Bristol Site,Grid Electricity,1609.7,370.2,No,2025-11-06
+90,Manchester Office,Natural Gas,1435.3,272.7,No,2025-05-13
+91,Bristol Site,Diesel Generator,1891.4,1040.3,No,2025-07-01
+92,Manchester Office,Solar,2012.0,40.2,Yes,2025-09-24
+93,Oxford Office,Wind,1636.9,16.4,Yes,2025-11-09
+94,Oxford Office,Solar,2302.4,46.0,Yes,2025-01-01
+95,Bristol Site,Grid Electricity,193.9,44.6,No,2025-03-02
+96,Manchester Office,Solar,2582.7,51.7,Yes,2025-07-31
+97,Bristol Site,Grid Electricity,1148.1,264.1,No,2025-11-23
+98,Oxford Office,Solar,154.8,3.1,Yes,2025-12-20
+99,Oxford Office,Natural Gas,903.6,171.7,No,2025-06-07
+100,Manchester Office,Natural Gas,1680.6,319.3,No,2025-01-04
+101,Manchester Office,Grid Electricity,2232.4,513.5,No,2025-07-22
+102,Oxford Office,Diesel Generator,2017.3,1109.5,No,2025-03-31
+103,Manchester Office,Solar,1138.0,22.8,Yes,2025-12-11
+104,Oxford Office,Wind,2941.8,29.4,Yes,2025-11-27
+105,Bristol Site,Solar,1603.0,32.1,Yes,2025-08-24
+106,Manchester Office,Diesel Generator,2879.5,1583.7,No,2025-07-31
+107,Manchester Office,Grid Electricity,2692.1,619.2,No,2025-10-17
+108,Oxford Office,Natural Gas,1829.9,347.7,No,2025-04-17
+109,Manchester Office,Diesel Generator,2231.3,1227.2,No,2025-02-03
+110,Oxford Office,Solar,983.8,19.7,Yes,2025-06-23
+111,Oxford Office,Wind,2049.7,20.5,Yes,2025-10-20
+112,Bristol Site,Diesel Generator,1319.9,725.9,No,2025-03-01
+113,Manchester Office,Natural Gas,2292.2,435.5,No,2025-12-30
+114,Oxford Office,Grid Electricity,956.2,219.9,No,2025-09-12
+115,Manchester Office,Solar,1264.5,25.3,Yes,2025-04-21
+116,Oxford Office,Diesel Generator,1051.1,578.1,No,2025-07-11
+117,Oxford Office,Grid Electricity,2515.6,578.6,No,2025-08-16
+118,Manchester Office,Diesel Generator,196.8,108.2,No,2025-09-14
+119,Manchester Office,Solar,705.9,14.1,Yes,2025-09-26
+120,Oxford Office,Natural Gas,2508.6,476.6,No,2025-02-20
+121,Oxford Office,Diesel Generator,2204.3,1212.4,No,2025-04-16
+122,Bristol Site,Grid Electricity,1534.9,353.0,No,2025-09-25
+123,Oxford Office,Grid Electricity,132.7,30.5,No,2025-12-18
+124,Manchester Office,Diesel Generator,2805.4,1543.0,No,2025-08-28
+125,Bristol Site,Grid Electricity,437.6,100.6,No,2025-06-09
+126,Manchester Office,Grid Electricity,1898.9,436.7,No,2025-11-24
+127,Oxford Office,Solar,1108.3,22.2,Yes,2025-05-27
+128,Manchester Office,Natural Gas,1759.4,334.3,No,2025-12-10
+129,Oxford Office,Grid Electricity,959.8,220.8,No,2025-05-21
+130,Bristol Site,Grid Electricity,167.0,38.4,No,2025-10-14
+131,Bristol Site,Diesel Generator,435.3,239.4,No,2025-06-29
+132,Oxford Office,Diesel Generator,1100.9,605.5,No,2025-12-27
+133,Oxford Office,Natural Gas,1888.2,358.8,No,2025-02-06
+134,Manchester Office,Natural Gas,2008.8,381.7,No,2025-10-04
+135,Oxford Office,Wind,276.2,2.8,Yes,2025-08-30
+136,Oxford Office,Grid Electricity,446.3,102.6,No,2025-02-14
+137,Bristol Site,Wind,1327.1,13.3,Yes,2025-11-02
+138,Bristol Site,Diesel Generator,2058.8,1132.3,No,2025-12-25
+139,Manchester Office,Wind,2018.3,20.2,Yes,2025-06-20
+140,Bristol Site,Solar,2315.7,46.3,Yes,2025-10-01
+141,Manchester Office,Grid Electricity,3118.9,717.3,No,2025-10-18
+142,Bristol Site,Solar,406.2,8.1,Yes,2025-08-28
+143,Bristol Site,Grid Electricity,1523.2,350.3,No,2025-11-26
+144,Oxford Office,Wind,1569.3,15.7,Yes,2025-03-15

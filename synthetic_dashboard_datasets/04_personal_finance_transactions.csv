@@ -1,0 +1,181 @@
+transaction_id,transaction_type,amount,category,transaction_date,payment_method,description
+1,Income,675.01,Freelance,2025-09-20,Bank Transfer,Freelance transaction
+2,Expense,322.65,Savings,2025-10-11,Cash,Savings transaction
+3,Expense,323.76,Transport,2025-12-18,Bank Transfer,Transport transaction
+4,Income,295.34,Groceries,2025-04-02,Bank Transfer,Groceries transaction
+5,Expense,256.53,Rent,2025-10-26,Direct Debit,Rent transaction
+6,Expense,382.51,Savings,2025-01-07,Card,Savings transaction
+7,Income,2733.22,Salary,2025-01-28,Card,Salary transaction
+8,Expense,355.21,Transport,2025-05-27,Bank Transfer,Transport transaction
+9,Expense,313.24,Groceries,2025-06-01,Cash,Groceries transaction
+10,Expense,367.8,Savings,2025-02-22,Cash,Savings transaction
+11,Expense,233.83,Savings,2025-12-23,Bank Transfer,Savings transaction
+12,Income,3497.08,Salary,2025-07-18,Direct Debit,Salary transaction
+13,Income,31.78,Utilities,2025-05-09,Cash,Utilities transaction
+14,Income,801.64,Freelance,2025-08-15,Cash,Freelance transaction
+15,Expense,249.6,Utilities,2025-11-05,Cash,Utilities transaction
+16,Expense,86.42,Transport,2025-12-16,Card,Transport transaction
+17,Income,332.91,Groceries,2025-03-03,Direct Debit,Groceries transaction
+18,Income,2799.91,Salary,2025-10-12,Bank Transfer,Salary transaction
+19,Expense,381.94,Groceries,2025-01-03,Bank Transfer,Groceries transaction
+20,Expense,76.42,Healthcare,2025-03-20,Bank Transfer,Healthcare transaction
+21,Income,188.14,Freelance,2025-11-17,Bank Transfer,Freelance transaction
+22,Expense,251.17,Healthcare,2025-02-07,Bank Transfer,Healthcare transaction
+23,Expense,89.27,Savings,2025-02-04,Cash,Savings transaction
+24,Expense,186.31,Entertainment,2025-06-28,Cash,Entertainment transaction
+25,Expense,154.33,Transport,2025-05-31,Cash,Transport transaction
+26,Income,547.87,Freelance,2025-10-15,Card,Freelance transaction
+27,Expense,204.98,Rent,2025-11-25,Cash,Rent transaction
+28,Income,3155.57,Salary,2025-06-14,Direct Debit,Salary transaction
+29,Expense,246.78,Rent,2025-05-25,Card,Rent transaction
+30,Expense,173.73,Savings,2025-09-18,Direct Debit,Savings transaction
+31,Expense,405.04,Healthcare,2025-04-09,Bank Transfer,Healthcare transaction
+32,Expense,50.41,Savings,2025-10-03,Card,Savings transaction
+33,Expense,286.25,Rent,2025-04-20,Direct Debit,Rent transaction
+34,Expense,374.31,Rent,2025-08-11,Card,Rent transaction
+35,Expense,324.86,Groceries,2025-01-20,Card,Groceries transaction
+36,Expense,359.04,Rent,2025-10-13,Card,Rent transaction
+37,Income,766.21,Freelance,2025-05-13,Direct Debit,Freelance transaction
+38,Expense,186.77,Entertainment,2025-06-11,Card,Entertainment transaction
+39,Expense,244.4,Entertainment,2025-11-25,Card,Entertainment transaction
+40,Income,184.14,Freelance,2025-02-07,Bank Transfer,Freelance transaction
+41,Expense,355.81,Savings,2025-06-04,Card,Savings transaction
+42,Expense,201.45,Dining,2025-07-22,Card,Dining transaction
+43,Expense,105.18,Healthcare,2025-07-20,Bank Transfer,Healthcare transaction
+44,Expense,400.04,Groceries,2025-11-28,Bank Transfer,Groceries transaction
+45,Income,2974.93,Salary,2025-10-12,Cash,Salary transaction
+46,Expense,261.14,Rent,2025-07-21,Card,Rent transaction
+47,Expense,335.71,Dining,2025-06-26,Cash,Dining transaction
+48,Expense,384.34,Entertainment,2025-03-14,Cash,Entertainment transaction
+49,Expense,376.96,Groceries,2025-04-10,Card,Groceries transaction
+50,Expense,258.74,Groceries,2025-01-28,Direct Debit,Groceries transaction
+51,Expense,304.88,Savings,2025-05-09,Card,Savings transaction
+52,Expense,223.34,Transport,2025-06-19,Bank Transfer,Transport transaction
+53,Expense,111.66,Groceries,2025-05-26,Card,Groceries transaction
+54,Expense,207.19,Transport,2025-11-12,Bank Transfer,Transport transaction
+55,Income,264.3,Freelance,2025-10-18,Bank Transfer,Freelance transaction
+56,Income,82.54,Utilities,2025-06-10,Cash,Utilities transaction
+57,Expense,291.25,Transport,2025-05-22,Bank Transfer,Transport transaction
+58,Expense,154.55,Groceries,2025-09-03,Direct Debit,Groceries transaction
+59,Expense,143.02,Healthcare,2025-10-10,Card,Healthcare transaction
+60,Expense,44.23,Groceries,2025-05-24,Cash,Groceries transaction
+61,Expense,332.23,Savings,2025-11-17,Card,Savings transaction
+62,Expense,383.52,Rent,2025-11-20,Card,Rent transaction
+63,Income,584.18,Freelance,2025-10-30,Cash,Freelance transaction
+64,Income,2972.23,Salary,2025-10-06,Direct Debit,Salary transaction
+65,Expense,106.7,Groceries,2025-10-29,Bank Transfer,Groceries transaction
+66,Expense,233.6,Groceries,2025-07-23,Bank Transfer,Groceries transaction
+67,Expense,113.59,Savings,2025-11-11,Cash,Savings transaction
+68,Expense,78.38,Savings,2025-10-17,Cash,Savings transaction
+69,Expense,25.87,Healthcare,2025-09-07,Cash,Healthcare transaction
+70,Expense,111.44,Rent,2025-12-09,Cash,Rent transaction
+71,Expense,167.67,Savings,2025-08-29,Direct Debit,Savings transaction
+72,Income,2255.87,Salary,2025-11-29,Bank Transfer,Salary transaction
+73,Expense,238.45,Rent,2025-05-21,Bank Transfer,Rent transaction
+74,Income,558.26,Freelance,2025-03-31,Direct Debit,Freelance transaction
+75,Expense,296.77,Entertainment,2025-02-09,Bank Transfer,Entertainment transaction
+76,Income,106.52,Entertainment,2025-07-27,Bank Transfer,Entertainment transaction
+77,Expense,221.09,Utilities,2025-11-06,Card,Utilities transaction
+78,Expense,202.44,Savings,2025-04-28,Card,Savings transaction
+79,Expense,101.49,Savings,2025-04-06,Cash,Savings transaction
+80,Expense,369.09,Utilities,2025-12-05,Cash,Utilities transaction
+81,Expense,326.35,Entertainment,2025-09-04,Direct Debit,Entertainment transaction
+82,Expense,79.27,Healthcare,2025-07-30,Card,Healthcare transaction
+83,Expense,261.48,Transport,2025-03-24,Cash,Transport transaction
+84,Expense,260.94,Savings,2025-01-29,Cash,Savings transaction
+85,Expense,236.36,Dining,2025-07-27,Card,Dining transaction
+86,Expense,103.73,Dining,2025-11-07,Direct Debit,Dining transaction
+87,Expense,375.02,Healthcare,2025-11-04,Cash,Healthcare transaction
+88,Income,765.34,Freelance,2025-04-04,Bank Transfer,Freelance transaction
+89,Expense,159.46,Groceries,2025-08-21,Card,Groceries transaction
+90,Expense,66.44,Transport,2025-01-09,Cash,Transport transaction
+91,Expense,230.93,Savings,2025-08-03,Cash,Savings transaction
+92,Income,222.22,Freelance,2025-09-01,Card,Freelance transaction
+93,Expense,59.94,Savings,2025-09-04,Cash,Savings transaction
+94,Income,554.46,Freelance,2025-01-01,Direct Debit,Freelance transaction
+95,Expense,394.67,Savings,2025-12-24,Direct Debit,Savings transaction
+96,Expense,221.1,Transport,2025-07-15,Bank Transfer,Transport transaction
+97,Income,753.47,Freelance,2025-12-23,Card,Freelance transaction
+98,Expense,218.9,Entertainment,2025-04-30,Card,Entertainment transaction
+99,Expense,248.33,Dining,2025-05-12,Cash,Dining transaction
+100,Income,3192.81,Salary,2025-01-04,Card,Salary transaction
+101,Expense,297.31,Savings,2025-12-19,Bank Transfer,Savings transaction
+102,Expense,76.41,Entertainment,2025-11-30,Bank Transfer,Entertainment transaction
+103,Expense,195.21,Dining,2025-07-07,Bank Transfer,Dining transaction
+104,Expense,190.65,Entertainment,2025-10-13,Direct Debit,Entertainment transaction
+105,Expense,253.27,Groceries,2025-05-10,Bank Transfer,Groceries transaction
+106,Income,408.27,Freelance,2025-12-28,Direct Debit,Freelance transaction
+107,Expense,299.4,Groceries,2025-04-28,Direct Debit,Groceries transaction
+108,Expense,232.69,Groceries,2025-06-23,Card,Groceries transaction
+109,Expense,289.06,Groceries,2025-02-16,Cash,Groceries transaction
+110,Expense,200.44,Healthcare,2025-02-02,Bank Transfer,Healthcare transaction
+111,Expense,277.19,Transport,2025-07-16,Direct Debit,Transport transaction
+112,Income,642.13,Freelance,2025-05-27,Card,Freelance transaction
+113,Expense,202.03,Groceries,2025-04-14,Bank Transfer,Groceries transaction
+114,Expense,272.99,Transport,2025-09-22,Cash,Transport transaction
+115,Income,277.11,Freelance,2025-01-19,Bank Transfer,Freelance transaction
+116,Expense,439.24,Transport,2025-02-14,Bank Transfer,Transport transaction
+117,Expense,182.65,Entertainment,2025-10-28,Cash,Entertainment transaction
+118,Expense,319.0,Savings,2025-02-16,Bank Transfer,Savings transaction
+119,Expense,161.86,Savings,2025-05-22,Cash,Savings transaction
+120,Income,872.29,Freelance,2025-08-21,Direct Debit,Freelance transaction
+121,Income,153.49,Freelance,2025-03-31,Direct Debit,Freelance transaction
+122,Expense,39.99,Savings,2025-05-31,Bank Transfer,Savings transaction
+123,Expense,430.87,Rent,2025-10-03,Bank Transfer,Rent transaction
+124,Income,256.92,Healthcare,2025-05-05,Bank Transfer,Healthcare transaction
+125,Expense,404.26,Healthcare,2025-01-15,Direct Debit,Healthcare transaction
+126,Expense,177.14,Rent,2025-04-23,Cash,Rent transaction
+127,Expense,164.07,Utilities,2025-10-02,Card,Utilities transaction
+128,Expense,49.11,Dining,2025-12-11,Bank Transfer,Dining transaction
+129,Expense,86.89,Rent,2025-06-10,Bank Transfer,Rent transaction
+130,Expense,126.93,Transport,2025-12-16,Cash,Transport transaction
+131,Expense,111.81,Healthcare,2025-05-04,Bank Transfer,Healthcare transaction
+132,Expense,377.04,Transport,2025-11-13,Bank Transfer,Transport transaction
+133,Expense,60.99,Groceries,2025-02-10,Direct Debit,Groceries transaction
+134,Income,154.97,Freelance,2025-10-05,Card,Freelance transaction
+135,Expense,147.41,Healthcare,2025-10-22,Bank Transfer,Healthcare transaction
+136,Expense,345.8,Healthcare,2025-09-19,Bank Transfer,Healthcare transaction
+137,Expense,262.89,Entertainment,2025-01-28,Direct Debit,Entertainment transaction
+138,Expense,22.39,Healthcare,2025-06-27,Direct Debit,Healthcare transaction
+139,Expense,61.2,Groceries,2025-09-23,Direct Debit,Groceries transaction
+140,Expense,13.22,Utilities,2025-04-18,Direct Debit,Utilities transaction
+141,Income,225.56,Freelance,2025-07-05,Bank Transfer,Freelance transaction
+142,Expense,112.82,Groceries,2025-08-30,Bank Transfer,Groceries transaction
+143,Expense,195.38,Utilities,2025-08-03,Bank Transfer,Utilities transaction
+144,Expense,131.6,Utilities,2025-04-03,Cash,Utilities transaction
+145,Income,664.51,Freelance,2025-02-21,Bank Transfer,Freelance transaction
+146,Expense,386.49,Transport,2025-04-11,Cash,Transport transaction
+147,Expense,12.31,Groceries,2025-08-04,Direct Debit,Groceries transaction
+148,Income,383.43,Groceries,2025-09-22,Bank Transfer,Groceries transaction
+149,Expense,256.47,Healthcare,2025-10-18,Card,Healthcare transaction
+150,Expense,80.2,Entertainment,2025-04-21,Bank Transfer,Entertainment transaction
+151,Expense,50.57,Healthcare,2025-06-21,Bank Transfer,Healthcare transaction
+152,Expense,254.41,Utilities,2025-05-12,Bank Transfer,Utilities transaction
+153,Income,2776.47,Salary,2025-06-29,Cash,Salary transaction
+154,Income,581.92,Freelance,2025-11-29,Cash,Freelance transaction
+155,Expense,305.55,Dining,2025-09-07,Direct Debit,Dining transaction
+156,Expense,134.64,Rent,2025-11-20,Cash,Rent transaction
+157,Expense,418.43,Groceries,2025-08-04,Direct Debit,Groceries transaction
+158,Expense,159.88,Rent,2025-06-10,Bank Transfer,Rent transaction
+159,Expense,275.58,Dining,2025-07-22,Bank Transfer,Dining transaction
+160,Expense,422.94,Healthcare,2025-10-28,Direct Debit,Healthcare transaction
+161,Expense,385.56,Entertainment,2025-03-06,Cash,Entertainment transaction
+162,Expense,317.71,Dining,2025-02-10,Cash,Dining transaction
+163,Expense,50.23,Groceries,2025-08-31,Card,Groceries transaction
+164,Income,3279.31,Salary,2025-09-26,Card,Salary transaction
+165,Expense,76.63,Rent,2025-12-02,Direct Debit,Rent transaction
+166,Expense,334.02,Dining,2025-08-15,Cash,Dining transaction
+167,Expense,83.41,Groceries,2025-01-18,Bank Transfer,Groceries transaction
+168,Expense,214.5,Utilities,2025-10-04,Bank Transfer,Utilities transaction
+169,Expense,436.54,Savings,2025-12-24,Cash,Savings transaction
+170,Income,598.19,Freelance,2025-11-20,Direct Debit,Freelance transaction
+171,Expense,243.93,Savings,2025-06-27,Direct Debit,Savings transaction
+172,Expense,47.58,Savings,2025-06-07,Bank Transfer,Savings transaction
+173,Expense,142.18,Entertainment,2025-01-01,Cash,Entertainment transaction
+174,Expense,244.51,Utilities,2025-12-19,Direct Debit,Utilities transaction
+175,Expense,346.51,Healthcare,2025-05-30,Cash,Healthcare transaction
+176,Income,2967.5,Salary,2025-04-07,Direct Debit,Salary transaction
+177,Expense,118.45,Savings,2025-11-27,Direct Debit,Savings transaction
+178,Expense,43.01,Entertainment,2025-11-17,Cash,Entertainment transaction
+179,Expense,410.2,Savings,2025-12-22,Bank Transfer,Savings transaction
+180,Expense,243.12,Dining,2025-05-18,Direct Debit,Dining transaction

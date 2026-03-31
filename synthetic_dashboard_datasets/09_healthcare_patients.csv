@@ -1,0 +1,21 @@
+patient_id,patient_name,age,gender,registered_date,primary_doctor
+1,Adam,20,Male,2024-08-13,Dr Lewis
+2,Aisha,26,Male,2024-10-25,Dr Lewis
+3,Ben,78,Female,2024-05-21,Dr Shah
+4,Clara,62,Male,2024-12-15,Dr Lewis
+5,Deepak,20,Female,2023-10-22,Dr Shah
+6,Ella,42,Male,2023-12-19,Dr Lewis
+7,Faisal,47,Female,2024-08-24,Dr Shah
+8,Georgia,61,Male,2023-05-15,Dr Lewis
+9,Hamza,67,Male,2024-11-20,Dr Shah
+10,Ivy,64,Male,2023-06-15,Dr Shah
+11,Jasmin,44,Male,2024-12-08,Dr Shah
+12,Karan,29,Male,2023-05-13,Dr Ahmed
+13,Lina,43,Female,2024-09-12,Dr Lewis
+14,Mason,30,Male,2024-05-20,Dr Lewis
+15,Nadia,48,Female,2024-07-24,Dr Ahmed
+16,Oscar,20,Male,2023-09-25,Dr Lewis
+17,Pooja,38,Female,2024-05-30,Dr Ahmed
+18,Quinn,26,Male,2024-03-16,Dr Ahmed
+19,Riya,47,Female,2024-07-29,Dr Ahmed
+20,Sam,80,Male,2023-12-15,Dr Lewis

@@ -1,0 +1,181 @@
+order_id,customer_name,product_name,category,order_value,order_date,payment_method,region,status,created_by
+ORD-1001,Emma Wilson,Backpack,Accessories,25.55,2025-05-06,Card,South,Completed,5
+ORD-1002,Alice Johnson,Backpack,Accessories,196.33,2025-01-16,Card,South,Completed,5
+ORD-1003,Daniel Brown,Sunglasses,Accessories,26.01,2025-11-29,Bank Transfer,West,Completed,4
+ORD-1004,Alice Johnson,Sunglasses,Accessories,102.01,2025-03-23,Bank Transfer,West,Completed,3
+ORD-1005,Farah Khan,Yoga Mat,Fitness,83.02,2025-02-22,Card,West,Completed,3
+ORD-1006,Alice Johnson,Headphones,Electronics,200.33,2025-08-24,Bank Transfer,North,Pending,1
+ORD-1007,Julia Thomas,Smartwatch,Electronics,106.54,2025-07-05,Bank Transfer,South,Completed,1
+ORD-1008,Ben Carter,Water Bottle,Fitness,251.47,2025-04-30,Card,West,Completed,4
+ORD-1009,Farah Khan,Headphones,Electronics,67.12,2025-04-18,Bank Transfer,East,Completed,5
+ORD-1010,Daniel Brown,Yoga Mat,Fitness,179.31,2025-03-25,PayPal,West,Completed,5
+ORD-1011,Alice Johnson,Water Bottle,Fitness,224.75,2025-04-28,Card,East,Pending,3
+ORD-1012,Julia Thomas,Backpack,Accessories,81.72,2025-06-11,Card,West,Pending,4
+ORD-1013,Daniel Brown,Yoga Mat,Fitness,97.99,2025-10-15,Bank Transfer,East,Cancelled,4
+ORD-1014,Daniel Brown,Sunglasses,Accessories,138.62,2025-03-12,Bank Transfer,West,Completed,1
+ORD-1015,Chloe Singh,Backpack,Accessories,64.16,2025-12-15,PayPal,North,Pending,4
+ORD-1016,Isaac Green,Sunglasses,Accessories,318.83,2025-05-09,Bank Transfer,North,Completed,5
+ORD-1017,Farah Khan,Jacket,Fashion,250.12,2025-02-27,PayPal,West,Completed,4
+ORD-1018,Emma Wilson,Running Shoes,Fashion,306.05,2025-09-14,Card,North,Completed,5
+ORD-1019,Farah Khan,Sunglasses,Accessories,78.07,2025-03-24,Bank Transfer,North,Cancelled,3
+ORD-1020,Farah Khan,Notebook,Stationery,23.88,2025-06-07,Card,North,Completed,5
+ORD-1021,Hannah Patel,Backpack,Accessories,43.87,2025-02-05,Bank Transfer,South,Completed,4
+ORD-1022,Isaac Green,Smartwatch,Electronics,67.87,2025-11-07,PayPal,South,Cancelled,2
+ORD-1023,Farah Khan,Jacket,Fashion,138.5,2025-08-13,Bank Transfer,West,Completed,2
+ORD-1024,Alice Johnson,Water Bottle,Fitness,37.34,2025-10-29,Bank Transfer,South,Cancelled,2
+ORD-1025,Alice Johnson,Running Shoes,Fashion,39.44,2025-04-28,Card,North,Completed,1
+ORD-1026,Hannah Patel,Smartwatch,Electronics,89.88,2025-04-20,Bank Transfer,South,Cancelled,5
+ORD-1027,Hannah Patel,Notebook,Stationery,91.39,2025-07-28,Card,North,Completed,4
+ORD-1028,Hannah Patel,Headphones,Electronics,145.92,2025-01-28,Bank Transfer,North,Completed,4
+ORD-1029,Ben Carter,Headphones,Electronics,259.78,2025-05-08,Card,South,Cancelled,4
+ORD-1030,Emma Wilson,Yoga Mat,Fitness,145.41,2025-08-25,Card,North,Pending,5
+ORD-1031,Isaac Green,Backpack,Accessories,33.28,2025-01-08,Card,South,Completed,4
+ORD-1032,George Evans,Notebook,Stationery,163.37,2025-01-31,Card,West,Completed,4
+ORD-1033,Hannah Patel,Jacket,Fashion,297.81,2025-05-27,PayPal,West,Completed,2
+ORD-1034,Alice Johnson,Jacket,Fashion,83.75,2025-10-24,Bank Transfer,North,Completed,1
+ORD-1035,Isaac Green,Running Shoes,Fashion,194.42,2025-09-29,Card,North,Cancelled,1
+ORD-1036,Ben Carter,Yoga Mat,Fitness,38.69,2025-12-12,Card,West,Completed,5
+ORD-1037,Alice Johnson,Water Bottle,Fitness,192.83,2025-11-14,Card,West,Cancelled,5
+ORD-1038,Emma Wilson,Smartwatch,Electronics,113.54,2025-04-15,Bank Transfer,East,Completed,3
+ORD-1039,Emma Wilson,Desk Lamp,Home,57.53,2025-08-23,PayPal,North,Completed,4
+ORD-1040,Ben Carter,Sunglasses,Accessories,319.53,2025-02-07,Bank Transfer,South,Cancelled,3
+ORD-1041,Ben Carter,Yoga Mat,Fitness,299.84,2025-05-06,PayPal,East,Completed,4
+ORD-1042,Julia Thomas,Smartwatch,Electronics,230.47,2025-12-01,Bank Transfer,North,Cancelled,3
+ORD-1043,Chloe Singh,Backpack,Accessories,301.56,2025-05-16,Card,North,Cancelled,2
+ORD-1044,Daniel Brown,Jacket,Fashion,103.09,2025-06-25,Card,East,Cancelled,4
+ORD-1045,Alice Johnson,Jacket,Fashion,291.41,2025-02-17,Bank Transfer,West,Completed,1
+ORD-1046,Chloe Singh,Running Shoes,Fashion,118.73,2025-11-23,PayPal,South,Pending,5
+ORD-1047,Ben Carter,Desk Lamp,Home,187.39,2025-02-08,Bank Transfer,South,Cancelled,1
+ORD-1048,Chloe Singh,Headphones,Electronics,193.92,2025-08-09,Card,North,Completed,3
+ORD-1049,Daniel Brown,Running Shoes,Fashion,289.48,2025-12-16,Card,North,Completed,5
+ORD-1050,Chloe Singh,Desk Lamp,Home,312.1,2025-05-02,Card,South,Pending,1
+ORD-1051,Farah Khan,Yoga Mat,Fitness,240.44,2025-07-30,Bank Transfer,South,Completed,2
+ORD-1052,Alice Johnson,Backpack,Accessories,133.53,2025-08-29,Card,South,Pending,3
+ORD-1053,Daniel Brown,Jacket,Fashion,265.8,2025-04-25,Card,South,Pending,3
+ORD-1054,Emma Wilson,Jacket,Fashion,279.03,2025-06-29,Bank Transfer,West,Cancelled,3
+ORD-1055,Emma Wilson,Running Shoes,Fashion,52.83,2025-04-02,Bank Transfer,East,Completed,1
+ORD-1056,Farah Khan,Sunglasses,Accessories,149.24,2025-08-12,Bank Transfer,North,Pending,5
+ORD-1057,George Evans,Water Bottle,Fitness,94.93,2025-01-01,Bank Transfer,South,Completed,4
+ORD-1058,Farah Khan,Backpack,Accessories,304.56,2025-11-16,PayPal,North,Completed,5
+ORD-1059,Farah Khan,Jacket,Fashion,219.4,2025-07-26,Bank Transfer,East,Cancelled,2
+ORD-1060,George Evans,Water Bottle,Fitness,144.97,2025-12-13,Bank Transfer,South,Cancelled,5
+ORD-1061,Alice Johnson,Jacket,Fashion,140.63,2025-06-05,PayPal,South,Pending,5
+ORD-1062,Hannah Patel,Sunglasses,Accessories,215.72,2025-08-15,PayPal,South,Cancelled,4
+ORD-1063,Emma Wilson,Yoga Mat,Fitness,216.97,2025-09-21,Bank Transfer,East,Completed,2
+ORD-1064,Daniel Brown,Jacket,Fashion,85.84,2025-03-17,Card,North,Completed,4
+ORD-1065,Ben Carter,Sunglasses,Accessories,274.62,2025-08-22,PayPal,South,Pending,4
+ORD-1066,Alice Johnson,Desk Lamp,Home,91.68,2025-02-24,PayPal,South,Completed,5
+ORD-1067,Daniel Brown,Notebook,Stationery,33.17,2025-03-04,PayPal,South,Pending,5
+ORD-1068,Hannah Patel,Smartwatch,Electronics,197.83,2025-11-10,Bank Transfer,West,Cancelled,4
+ORD-1069,Hannah Patel,Yoga Mat,Fitness,242.58,2025-08-19,PayPal,South,Completed,5
+ORD-1070,Emma Wilson,Notebook,Stationery,207.28,2025-08-14,Card,East,Completed,3
+ORD-1071,Isaac Green,Headphones,Electronics,114.55,2025-02-11,Card,South,Completed,4
+ORD-1072,Ben Carter,Yoga Mat,Fitness,231.34,2025-08-01,PayPal,East,Cancelled,4
+ORD-1073,George Evans,Desk Lamp,Home,36.8,2025-07-19,Bank Transfer,North,Cancelled,4
+ORD-1074,Farah Khan,Notebook,Stationery,19.78,2025-06-02,PayPal,West,Cancelled,5
+ORD-1075,Hannah Patel,Sunglasses,Accessories,289.14,2025-04-23,PayPal,West,Pending,1
+ORD-1076,George Evans,Desk Lamp,Home,119.51,2025-03-26,PayPal,South,Cancelled,5
+ORD-1077,Julia Thomas,Running Shoes,Fashion,291.89,2025-10-16,Bank Transfer,North,Completed,4
+ORD-1078,Chloe Singh,Yoga Mat,Fitness,279.79,2025-01-26,PayPal,West,Completed,2
+ORD-1079,George Evans,Notebook,Stationery,116.71,2025-05-23,PayPal,East,Completed,4
+ORD-1080,Alice Johnson,Running Shoes,Fashion,244.21,2025-06-29,Card,North,Completed,1
+ORD-1081,Alice Johnson,Water Bottle,Fitness,78.21,2025-11-15,Card,South,Completed,4
+ORD-1082,Daniel Brown,Backpack,Accessories,188.32,2025-08-27,Bank Transfer,East,Completed,2
+ORD-1083,Ben Carter,Sunglasses,Accessories,201.39,2025-03-25,PayPal,North,Cancelled,1
+ORD-1084,George Evans,Jacket,Fashion,191.89,2025-07-23,Bank Transfer,South,Completed,5
+ORD-1085,Emma Wilson,Water Bottle,Fitness,48.77,2025-12-17,Bank Transfer,North,Cancelled,1
+ORD-1086,Farah Khan,Headphones,Electronics,178.89,2025-02-05,Bank Transfer,East,Completed,4
+ORD-1087,Farah Khan,Notebook,Stationery,49.87,2025-11-22,PayPal,South,Pending,2
+ORD-1088,Emma Wilson,Smartwatch,Electronics,309.57,2025-11-12,Bank Transfer,West,Pending,4
+ORD-1089,Daniel Brown,Sunglasses,Accessories,99.06,2025-02-14,PayPal,West,Completed,4
+ORD-1090,George Evans,Sunglasses,Accessories,202.32,2025-06-22,Card,West,Completed,2
+ORD-1091,Emma Wilson,Notebook,Stationery,82.06,2025-06-24,PayPal,East,Cancelled,1
+ORD-1092,Ben Carter,Smartwatch,Electronics,304.31,2025-05-04,Bank Transfer,West,Pending,5
+ORD-1093,Hannah Patel,Water Bottle,Fitness,226.56,2025-08-18,Card,North,Completed,2
+ORD-1094,Emma Wilson,Desk Lamp,Home,226.92,2025-12-06,Bank Transfer,East,Pending,5
+ORD-1095,Isaac Green,Smartwatch,Electronics,121.81,2025-06-19,PayPal,West,Completed,3
+ORD-1096,Daniel Brown,Jacket,Fashion,87.62,2025-06-11,Card,South,Completed,2
+ORD-1097,Julia Thomas,Notebook,Stationery,101.5,2025-09-26,Bank Transfer,East,Completed,2
+ORD-1098,Chloe Singh,Jacket,Fashion,86.7,2025-06-04,Card,South,Completed,1
+ORD-1099,Chloe Singh,Running Shoes,Fashion,185.11,2025-11-23,PayPal,North,Completed,5
+ORD-1100,Hannah Patel,Jacket,Fashion,159.76,2025-06-24,Card,North,Completed,4
+ORD-1101,George Evans,Backpack,Accessories,266.28,2025-09-09,Card,North,Completed,2
+ORD-1102,Ben Carter,Sunglasses,Accessories,304.64,2025-05-08,Card,West,Cancelled,5
+ORD-1103,Isaac Green,Sunglasses,Accessories,86.16,2025-07-14,PayPal,West,Completed,5
+ORD-1104,Julia Thomas,Desk Lamp,Home,110.22,2025-01-31,Bank Transfer,North,Completed,2
+ORD-1105,Chloe Singh,Jacket,Fashion,217.45,2025-05-03,Card,North,Completed,1
+ORD-1106,Julia Thomas,Desk Lamp,Home,154.05,2025-08-29,PayPal,North,Completed,3
+ORD-1107,Hannah Patel,Jacket,Fashion,230.3,2025-02-06,Bank Transfer,South,Completed,5
+ORD-1108,Isaac Green,Water Bottle,Fitness,146.39,2025-04-26,Bank Transfer,South,Completed,2
+ORD-1109,Emma Wilson,Backpack,Accessories,36.01,2025-11-01,Bank Transfer,East,Pending,1
+ORD-1110,George Evans,Notebook,Stationery,225.98,2025-05-20,Bank Transfer,West,Pending,1
+ORD-1111,George Evans,Sunglasses,Accessories,30.04,2025-06-15,Bank Transfer,East,Completed,1
+ORD-1112,Julia Thomas,Water Bottle,Fitness,308.5,2025-10-28,Card,East,Cancelled,1
+ORD-1113,Hannah Patel,Yoga Mat,Fitness,160.09,2025-05-23,Card,West,Pending,1
+ORD-1114,Farah Khan,Notebook,Stationery,123.08,2025-06-14,Bank Transfer,North,Completed,3
+ORD-1115,Emma Wilson,Desk Lamp,Home,227.49,2025-12-06,PayPal,North,Pending,1
+ORD-1116,Ben Carter,Headphones,Electronics,94.22,2025-07-26,Bank Transfer,North,Cancelled,4
+ORD-1117,Isaac Green,Desk Lamp,Home,34.37,2025-07-05,Bank Transfer,West,Pending,1
+ORD-1118,Chloe Singh,Water Bottle,Fitness,98.65,2025-05-28,PayPal,West,Completed,1
+ORD-1119,Chloe Singh,Sunglasses,Accessories,259.39,2025-06-09,Bank Transfer,North,Cancelled,4
+ORD-1120,Ben Carter,Backpack,Accessories,85.86,2025-08-25,Card,South,Pending,3
+ORD-1121,George Evans,Smartwatch,Electronics,231.03,2025-09-05,PayPal,South,Pending,5
+ORD-1122,Julia Thomas,Yoga Mat,Fitness,133.84,2025-09-18,Bank Transfer,South,Completed,3
+ORD-1123,Isaac Green,Desk Lamp,Home,120.64,2025-05-17,Card,East,Completed,5
+ORD-1124,Hannah Patel,Sunglasses,Accessories,319.67,2025-03-18,PayPal,West,Completed,3
+ORD-1125,George Evans,Smartwatch,Electronics,248.39,2025-08-22,PayPal,South,Completed,5
+ORD-1126,George Evans,Desk Lamp,Home,88.54,2025-01-23,PayPal,West,Pending,4
+ORD-1127,Alice Johnson,Yoga Mat,Fitness,167.59,2025-03-06,Bank Transfer,East,Completed,4
+ORD-1128,Hannah Patel,Backpack,Accessories,176.84,2025-01-08,Bank Transfer,South,Pending,2
+ORD-1129,Emma Wilson,Backpack,Accessories,159.79,2025-06-23,Bank Transfer,West,Completed,3
+ORD-1130,Farah Khan,Smartwatch,Electronics,132.76,2025-11-17,Bank Transfer,West,Cancelled,1
+ORD-1131,Emma Wilson,Sunglasses,Accessories,38.66,2025-04-27,Bank Transfer,North,Pending,1
+ORD-1132,Emma Wilson,Backpack,Accessories,151.99,2025-01-15,Card,East,Completed,3
+ORD-1133,Chloe Singh,Headphones,Electronics,131.2,2025-05-06,Bank Transfer,West,Cancelled,2
+ORD-1134,Julia Thomas,Yoga Mat,Fitness,70.87,2025-07-15,Bank Transfer,South,Pending,5
+ORD-1135,Emma Wilson,Yoga Mat,Fitness,88.12,2025-08-24,PayPal,North,Pending,3
+ORD-1136,Hannah Patel,Smartwatch,Electronics,65.71,2025-06-26,Bank Transfer,East,Pending,3
+ORD-1137,Daniel Brown,Notebook,Stationery,273.28,2025-07-16,PayPal,North,Completed,4
+ORD-1138,Emma Wilson,Sunglasses,Accessories,126.41,2025-12-25,PayPal,North,Pending,3
+ORD-1139,Alice Johnson,Running Shoes,Fashion,188.91,2025-11-07,Bank Transfer,West,Completed,2
+ORD-1140,Daniel Brown,Sunglasses,Accessories,260.18,2025-11-22,Card,East,Completed,1
+ORD-1141,Hannah Patel,Running Shoes,Fashion,111.3,2025-01-18,Bank Transfer,East,Completed,1
+ORD-1142,George Evans,Jacket,Fashion,116.67,2025-03-31,Card,South,Cancelled,3
+ORD-1143,Emma Wilson,Smartwatch,Electronics,169.54,2025-03-26,PayPal,West,Completed,3
+ORD-1144,Ben Carter,Backpack,Accessories,159.44,2025-03-14,Card,West,Cancelled,3
+ORD-1145,Alice Johnson,Backpack,Accessories,256.79,2025-05-16,Bank Transfer,North,Pending,3
+ORD-1146,Farah Khan,Jacket,Fashion,194.54,2025-02-25,Bank Transfer,South,Pending,1
+ORD-1147,Isaac Green,Sunglasses,Accessories,285.04,2025-06-17,Bank Transfer,South,Completed,4
+ORD-1148,Ben Carter,Jacket,Fashion,214.07,2025-03-13,Card,North,Completed,4
+ORD-1149,Isaac Green,Backpack,Accessories,47.35,2025-03-11,PayPal,West,Completed,5
+ORD-1150,Chloe Singh,Desk Lamp,Home,195.38,2025-08-01,Bank Transfer,North,Pending,5
+ORD-1151,Emma Wilson,Desk Lamp,Home,301.59,2025-01-17,Bank Transfer,East,Completed,4
+ORD-1152,Farah Khan,Notebook,Stationery,305.07,2025-02-20,Bank Transfer,East,Cancelled,3
+ORD-1153,Daniel Brown,Running Shoes,Fashion,138.24,2025-03-04,PayPal,North,Completed,5
+ORD-1154,Farah Khan,Running Shoes,Fashion,33.27,2025-05-05,Card,South,Completed,5
+ORD-1155,Daniel Brown,Water Bottle,Fitness,195.09,2025-06-18,Card,North,Completed,2
+ORD-1156,Chloe Singh,Yoga Mat,Fitness,181.15,2025-02-26,Bank Transfer,North,Completed,1
+ORD-1157,Daniel Brown,Headphones,Electronics,256.58,2025-10-29,PayPal,North,Completed,3
+ORD-1158,George Evans,Running Shoes,Fashion,56.28,2025-09-27,Card,North,Pending,4
+ORD-1159,Ben Carter,Headphones,Electronics,173.0,2025-08-20,Bank Transfer,South,Cancelled,1
+ORD-1160,Alice Johnson,Smartwatch,Electronics,109.09,2025-02-01,PayPal,West,Pending,1
+ORD-1161,Hannah Patel,Notebook,Stationery,233.15,2025-02-07,Card,East,Cancelled,2
+ORD-1162,Julia Thomas,Backpack,Accessories,56.11,2025-11-21,Bank Transfer,East,Pending,5
+ORD-1163,Isaac Green,Smartwatch,Electronics,107.06,2025-11-06,PayPal,North,Completed,5
+ORD-1164,Daniel Brown,Water Bottle,Fitness,147.88,2025-07-31,PayPal,West,Pending,4
+ORD-1165,Farah Khan,Backpack,Accessories,112.39,2025-12-07,PayPal,East,Completed,4
+ORD-1166,Ben Carter,Backpack,Accessories,45.55,2025-02-17,PayPal,North,Completed,2
+ORD-1167,Isaac Green,Smartwatch,Electronics,36.11,2025-10-15,PayPal,North,Pending,3
+ORD-1168,Alice Johnson,Desk Lamp,Home,280.16,2025-05-28,Bank Transfer,East,Completed,1
+ORD-1169,Chloe Singh,Sunglasses,Accessories,171.24,2025-12-03,PayPal,South,Completed,3
+ORD-1170,Emma Wilson,Smartwatch,Electronics,129.0,2025-10-21,Card,West,Cancelled,5
+ORD-1171,Isaac Green,Sunglasses,Accessories,221.84,2025-01-14,Bank Transfer,East,Completed,2
+ORD-1172,Emma Wilson,Jacket,Fashion,230.22,2025-06-23,PayPal,North,Completed,2
+ORD-1173,Ben Carter,Sunglasses,Accessories,216.52,2025-03-14,Bank Transfer,North,Completed,5
+ORD-1174,Hannah Patel,Water Bottle,Fitness,131.61,2025-06-24,Card,East,Completed,3
+ORD-1175,Alice Johnson,Sunglasses,Accessories,198.06,2025-03-21,Card,North,Completed,3
+ORD-1176,Hannah Patel,Notebook,Stationery,217.91,2025-11-07,PayPal,West,Completed,2
+ORD-1177,George Evans,Smartwatch,Electronics,52.37,2025-02-26,PayPal,West,Cancelled,3
+ORD-1178,Julia Thomas,Running Shoes,Fashion,84.6,2025-01-29,Card,South,Completed,2
+ORD-1179,Emma Wilson,Yoga Mat,Fitness,248.78,2025-06-17,Card,North,Pending,4
+ORD-1180,Isaac Green,Yoga Mat,Fitness,57.01,2025-12-27,Card,East,Completed,4
