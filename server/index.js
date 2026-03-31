@@ -33,7 +33,28 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Initialize DB then start server
-initDb().then(() => {
+initDb().then(async () => {
+  // Run seed in production
+  if (process.env.NODE_ENV === 'production') {
+    console.log('🌱 Running database seed...');
+    try {
+      const { exec } = require('child_process');
+      await new Promise((resolve, reject) => {
+        exec('node seed.js', { cwd: __dirname }, (error, stdout, stderr) => {
+          if (error) {
+            console.error('Seed error:', error);
+            reject(error);
+          } else {
+            console.log(stdout);
+            resolve();
+          }
+        });
+      });
+    } catch (err) {
+      console.error('Failed to seed database:', err);
+    }
+  }
+  
   app.listen(PORT, () => {
     console.log(`\n🚀 EDOS API Server running on http://localhost:${PORT}`);
     console.log(`   Health check: http://localhost:${PORT}/api/health\n`);
