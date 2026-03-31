@@ -2,7 +2,7 @@ services:
   - type: web
     name: edos-dashboard
     env: node
-    buildCommand: npm run build
+    buildCommand: npm run build && npm run seed --prefix server
     startCommand: npm start
     envVars:
       - key: NODE_ENV
