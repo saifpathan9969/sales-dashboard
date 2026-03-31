@@ -38,8 +38,8 @@ initDb().then(async () => {
   if (process.env.NODE_ENV === 'production') {
     console.log('🌱 Running database seed...');
     try {
-      // Import and run seed directly
       const bcrypt = require('bcryptjs');
+      const fs = require('fs');
       const { queryOne, execute } = require('./db');
       
       // Create admin user
@@ -62,6 +62,44 @@ initDb().then(async () => {
         console.log('  ✓ Demo user created (user@edos.com / user123)');
       } else {
         console.log('  ✓ Demo user already exists');
+      }
+      
+      // Import CSV data
+      const orderCount = queryOne('SELECT COUNT(*) as count FROM orders');
+      if (orderCount.count === 0) {
+        console.log('  📂 Importing sales data...');
+        const csvPath = path.join(__dirname, '..', 'cleaned_sales_orders.csv');
+        
+        if (fs.existsSync(csvPath)) {
+          const csvContent = fs.readFileSync(csvPath, 'utf-8');
+          const lines = csvContent.trim().split('\n');
+          const headers = lines[0].split(',').map(h => h.trim());
+          
+          let imported = 0;
+          for (let i = 1; i < lines.length; i++) {
+            const line = lines[i].trim();
+            if (!line) continue;
+            const values = line.split(',');
+            const row = {};
+            headers.forEach((h, idx) => { row[h] = values[idx] ? values[idx].trim() : ''; });
+            
+            try {
+              execute(
+                `INSERT OR IGNORE INTO orders (order_id, customer_name, product_name, category, order_value, order_date, payment_method, region, status, created_by)
+                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+                [row.order_id, row.customer_name, row.product_name, row.category, parseFloat(row.order_value), row.order_date, row.payment_method, row.region, row.status, parseInt(row.created_by) || 1]
+              );
+              imported++;
+            } catch (e) {
+              // skip errors
+            }
+          }
+          console.log(`  ✓ Imported ${imported} orders from CSV`);
+        } else {
+          console.log('  ⚠ CSV file not found, skipping data import');
+        }
+      } else {
+        console.log(`  ✓ Orders table already has ${orderCount.count} records`);
       }
       
       console.log('✅ Database seeded successfully!');
