@@ -31,6 +31,7 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [filters, setFilters] = useState({ date_from: '', date_to: '', category: '' });
+  const [groupBy, setGroupBy] = useState('monthly');
   const [categories, setCategories] = useState([]);
   const navigate = useNavigate();
 
@@ -45,7 +46,7 @@ export default function Dashboard() {
 
       const [kpiRes, revRes, catRes, ordersRes, metaRes] = await Promise.all([
         api.getKPIs(params),
-        api.getRevenueOverTime(params),
+        api.getRevenueOverTime({ ...params, groupBy }),
         api.getSalesByCategory(params),
         api.getOrders({ limit: 8, sort: 'order_date', order: 'desc' }),
         api.getOrdersMeta()
@@ -68,7 +69,7 @@ export default function Dashboard() {
     } finally {
       setLoading(false);
     }
-  }, [filters]);
+  }, [filters, groupBy]);
 
   useEffect(() => { fetchData(); }, [fetchData]);
 
@@ -159,6 +160,14 @@ export default function Dashboard() {
               {kpis.growth_percentage >= 0 ? 'Growing' : 'Declining'}
             </div>
           </div>
+
+          <div className="kpi-card rose">
+            <div className="kpi-header">
+              <span className="kpi-label">Cancelled Orders</span>
+              <div className="kpi-icon rose">❌</div>
+            </div>
+            <div className="kpi-value">{kpis.cancelled_percentage}%</div>
+          </div>
         </div>
       )}
 
@@ -171,7 +180,15 @@ export default function Dashboard() {
       ) : (
         <div className="charts-grid">
           <div className="chart-card">
-            <h3>📈 Revenue Over Time</h3>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+              <h3 style={{ margin: 0 }}>📈 Revenue Over Time</h3>
+              <select className="form-select" style={{ width: 'auto', padding: '4px 8px', fontSize: '14px' }} 
+                value={groupBy} onChange={e => setGroupBy(e.target.value)}>
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+              </select>
+            </div>
             {revenueData.length === 0 ? (
               <div className="state-container" style={{ padding: '40px 0' }}>
                 <div className="state-icon">📉</div>

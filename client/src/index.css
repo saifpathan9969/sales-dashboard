@@ -400,6 +400,7 @@ a:hover {
 .kpi-card.purple::before { background: var(--accent-purple); }
 .kpi-card.emerald::before { background: var(--accent-emerald); }
 .kpi-card.amber::before { background: var(--accent-amber); }
+.kpi-card.rose::before { background: var(--accent-rose); }
 
 .kpi-card:hover {
   transform: translateY(-2px);
@@ -435,6 +436,7 @@ a:hover {
 .kpi-icon.purple { background: rgba(124, 58, 237, 0.1); color: var(--accent-purple); }
 .kpi-icon.emerald { background: rgba(16, 185, 129, 0.1); color: var(--accent-emerald); }
 .kpi-icon.amber { background: rgba(245, 158, 11, 0.1); color: var(--accent-amber); }
+.kpi-icon.rose { background: rgba(244, 63, 94, 0.1); color: var(--accent-rose); }
 
 .kpi-value {
   font-size: 1.85rem;

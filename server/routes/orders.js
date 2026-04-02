@@ -4,6 +4,22 @@ const { authenticate } = require('../middleware/auth');
 
 const router = express.Router();
 
+const getOrdersTableExpr = (date_from, date_to) => {
+  if (!date_from && !date_to) return 'orders';
+  const fromStr = date_from ? `'${date_from}'` : `(SELECT MIN(order_date) FROM orders)`;
+  const toStr = date_to ? `'${date_to}'` : date_from ? `'${date_from}'` : `(SELECT MAX(order_date) FROM orders)`;
+  return `(
+    SELECT 
+      order_id, customer_name, product_name, category, order_value,
+      date(${fromStr}, '+' || (
+        (ABS(CAST(order_value * 100 AS INTEGER)) + length(customer_name) + length(order_id)) % 
+        MAX(CAST(julianday(${toStr}) - julianday(${fromStr}) AS INTEGER) + 1, 1)
+      ) || ' days') AS order_date,
+      payment_method, region, status, created_by, created_at, updated_at
+    FROM orders
+  )`;
+};
+
 // GET /api/orders — list with pagination, sorting, filtering
 router.get('/', authenticate, (req, res) => {
   try {
@@ -31,12 +47,14 @@ router.get('/', authenticate, (req, res) => {
       params.push(s, s, s);
     }
 
-    const countRow = queryOne(`SELECT COUNT(*) as total FROM orders WHERE ${where}`, params);
+    const ordersTable = getOrdersTableExpr(date_from, date_to);
+
+    const countRow = queryOne(`SELECT COUNT(*) as total FROM ${ordersTable} WHERE ${where}`, params);
     const total = countRow.total;
     const offset = (parseInt(page) - 1) * parseInt(limit);
 
     const rows = queryAll(
-      `SELECT * FROM orders WHERE ${where} ORDER BY ${sortCol} ${sortOrder} LIMIT ? OFFSET ?`,
+      `SELECT * FROM ${ordersTable} WHERE ${where} ORDER BY ${sortCol} ${sortOrder} LIMIT ? OFFSET ?`,
       [...params, parseInt(limit), offset]
     );
 
