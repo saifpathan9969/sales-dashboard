@@ -8,21 +8,41 @@ export default function CancelInsights() {
   const { api } = useAuth();
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [filters, setFilters] = useState({
+    date_from: '',
+    date_to: '',
+    category: ''
+  });
 
   useEffect(() => {
     fetchData();
   }, []);
 
-  const fetchData = async () => {
+  const fetchData = async (currentFilters = filters) => {
     setLoading(true);
     try {
-      const res = await api.get('/dashboard/cancellation-rates');
+      const params = new URLSearchParams();
+      if (currentFilters.date_from) params.append('date_from', currentFilters.date_from);
+      if (currentFilters.date_to) params.append('date_to', currentFilters.date_to);
+      if (currentFilters.category) params.append('category', currentFilters.category);
+      
+      const res = await api.get(`/dashboard/cancellation-rates?${params.toString()}`);
       console.log('CancelInsights data received:', res);
       setData(res);
     } catch (err) {
       console.error('CancelInsights error:', err);
     }
     setLoading(false);
+  };
+
+  const applyFilters = () => {
+    fetchData(filters);
+  };
+
+  const resetFilters = () => {
+    const emptyFilters = { date_from: '', date_to: '', category: '' };
+    setFilters(emptyFilters);
+    fetchData(emptyFilters);
   };
 
   if (loading) return <div className="state-container"><div className="spinner" /></div>;
@@ -41,6 +61,45 @@ export default function CancelInsights() {
           <p className="page-subtitle">Behavioral analysis of order cancellations and revenue impact.</p>
         </div>
       </header>
+
+      {/* Filter Bar */}
+      <div className="filter-bar">
+        <div className="form-group">
+          <label className="form-label">From Date</label>
+          <input 
+            type="date" 
+            className="form-input" 
+            value={filters.date_from}
+            onChange={(e) => setFilters(f => ({ ...f, date_from: e.target.value }))}
+          />
+        </div>
+        <div className="form-group">
+          <label className="form-label">To Date</label>
+          <input 
+            type="date" 
+            className="form-input"
+            value={filters.date_to}
+            onChange={(e) => setFilters(f => ({ ...f, date_to: e.target.value }))}
+          />
+        </div>
+        <div className="form-group">
+          <label className="form-label">Category</label>
+          <select 
+            className="form-select"
+            value={filters.category}
+            onChange={(e) => setFilters(f => ({ ...f, category: e.target.value }))}
+          >
+            <option value="">All Categories</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Home & Garden">Home & Garden</option>
+            <option value="Books">Books</option>
+            <option value="Sports">Sports</option>
+          </select>
+        </div>
+        <button className="btn btn-primary" onClick={applyFilters}>Apply Filters</button>
+        <button className="btn btn-secondary" onClick={resetFilters}>Reset</button>
+      </div>
       
       {/* KPIs */}
       <div className="grid grid-cols-4 gap-md" style={{ marginBottom: '2rem' }}>

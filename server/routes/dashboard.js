@@ -144,11 +144,12 @@ router.get('/top-customers', authenticate, (req, res) => {
 // GET /api/dashboard/cancellation-rates
 router.get('/cancellation-rates', authenticate, (req, res) => {
   try {
-    const { date_from, date_to } = req.query;
+    const { date_from, date_to, category } = req.query;
     let where = '1=1';
     const params = [];
     if (date_from) { where += ' AND order_date >= ?'; params.push(date_from); }
     if (date_to) { where += ' AND order_date <= ?'; params.push(date_to); }
+    if (category) { where += ' AND category = ?'; params.push(category); }
 
     const ordersTable = getOrdersTableExpr(date_from, date_to);
 
