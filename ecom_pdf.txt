@@ -1,0 +1,52 @@
+ 
+ 
+ 
+E-Commerce Business 
+ 
+ 
+Team:- Cyber Guard 
+Mentor:- Anwar Nizami 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+❖ AI Models that can be developed using the data. 
+ 
+1. Hesitation Detection:-  
+It will use data like time spent on product page, mouse movement 
+and hover, scrolling behaviour, click patterns 
+2. Purchase Prediction:- 
+   Will this user buy the product or leave without buying? 
+So instead of waiting for the user to decide, your system predicts their 
+decision in advance. 
+(Note:- But I think that it would not be that useful because we can 
+never predict about the customer mindset) 
+ 
+But still we can use the below techniques in it:- 
+If user is likely to BUY: 
+• Show:  
+o “Hurry! Only 2 left”  
+o Fast checkout option  
+If user is likely to LEA VE: 
+• Show:  
+o Discount (“Get 10% off now”)  
+o Reviews or ratings  
+o Trust badges  
+o Goal: Stop them from leaving 
+ 
+ 
+ 
+3. Smart Recommendation System:- 
+ 
+a. Normal System: 
+• Based on past purchases and trends  
+• Same recommendations for many users  
+b. Smart System: 
+• Based on user behaviour (time, clicks, hesitation)  
+• Personalized recommendations for each user 
+ 

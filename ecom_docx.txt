@@ -1,0 +1,183 @@
+Sales Performance Dashboard for 
+
+E-Commerce Business 
+
+
+
+
+
+Team:- Cyber Guard
+
+Mentor:- Anwar Nizami
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Report: Features of the Simulated E-commerce Platform for Behavioral Analysis
+
+
+
+1. Introduction
+
+The proposed simulated e-commerce platform is designed not only for product browsing and purchasing but primarily for behavioral data collection and analysis. Unlike traditional e-commerce systems, this platform focuses on understanding user actions, decision-making patterns, and interaction flows.
+
+
+
+
+
+2. Limitations of Traditional E-commerce Platforms
+
+Most existing e-commerce platforms focus on:
+
+Product sales and revenue generation
+
+Basic analytics such as traffic, conversion rate, and sales
+
+Limited visibility into user behavior
+
+They typically do not expose detailed behavioral data, user journey mapping, or pattern-level insights to analysts.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. Unique Features of the Proposed System which are still not implemented.
+
+
+
+3.1 Deep Behavioral Tracking
+
+Instead of basic tracking, build a behavior capture engine:
+
+Track hover time on buttons or products 
+
+Capture scroll depth and speed 
+
+Record mouse movement patterns
+
+Detect idle time
+
+ Output:
+
+“User hesitated 8 seconds before clicking Buy” 
+
+“User repeatedly hovered on price section”
+
+
+
+
+
+3.2 Drop-off Reason Analysis
+
+Step-based cancellation capture: 
+
+“At which step did you cancel?” 
+
+Smart follow-up questions: 
+
+If “Too expensive” → ask “Compared to what?”
+
+
+
+3.3 Time-Based Behavioral Analysis
+
+Create a timeline for each user session:
+
+Time spent on: 
+
+product page 
+
+cart 
+
+checkout 
+
+Time gap between: 
+
+add-to-cart → purchase 
+
+Detect: 
+
+fast decisions 
+
+slow decisions
+
+
+
+
+
+
+
+
+
+3.4 Post-Cancellation Tracking
+
+After cancellation:
+
+Track: 
+
+Did user return? 
+
+Did they buy same product later? 
+
+Did they switch to cheaper option? 
+
+We can use journey map of the user for it.
+
+
+
+
+
+
+
+Things Mostly Missing in E-commerce using attracting customers:-
+
+Attract users with something interesting like “Find your shopping type”
+
+Ask a few simple questions to understand them
+
+Show products based on what they like by doing the analysis of their history.
+
+Track what they do on the website
+
+Bring them back with reminders and offers.

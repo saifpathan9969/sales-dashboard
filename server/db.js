@@ -62,6 +62,18 @@ function initDb() {
       )
     `);
 
+    // Migration: Add cancellation_reason column for backward compatibility
+    // This ensures existing databases created before this column was added
+    // will have the column available for cancellation insights queries
+    try {
+      db.run(`ALTER TABLE orders ADD COLUMN cancellation_reason TEXT`);
+    } catch (e) {
+      // Ignore "duplicate column name" error - column already exists
+      if (!e.message.includes('duplicate column name')) {
+        throw e;
+      }
+    }
+
     db.run(`
       CREATE TABLE IF NOT EXISTS behavioral_logs (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
