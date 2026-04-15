@@ -15,12 +15,23 @@ function initDb() {
       if (fs.existsSync(DB_PATH)) {
         const buffer = fs.readFileSync(DB_PATH);
         db = new SQL.Database(buffer);
+        console.log('📂 Loaded existing database from', DB_PATH);
       } else {
         db = new SQL.Database();
+        console.log('📂 Created new database');
       }
     } catch (e) {
       db = new SQL.Database();
+      console.log('📂 Created new database (error loading existing)');
     }
+    
+    // Create schema_version table to track migrations
+    db.run(`
+      CREATE TABLE IF NOT EXISTS schema_version (
+        version INTEGER PRIMARY KEY,
+        applied_at TEXT DEFAULT (datetime('now'))
+      )
+    `);
     
     db.run(`
       CREATE TABLE IF NOT EXISTS users (
@@ -62,16 +73,41 @@ function initDb() {
       )
     `);
 
-    // Migration: Add cancellation_reason column for backward compatibility
-    // This ensures existing databases created before this column was added
-    // will have the column available for cancellation insights queries
+    // Migration 1: Add cancellation_reason column
+    // Check if migration has been applied using direct SQL
+    let migration1Applied = false;
     try {
-      db.run(`ALTER TABLE orders ADD COLUMN cancellation_reason TEXT`);
-    } catch (e) {
-      // Ignore "duplicate column name" error - column already exists
-      if (!e.message.includes('duplicate column name')) {
-        throw e;
+      const stmt = db.prepare('SELECT version FROM schema_version WHERE version = 1');
+      if (stmt.step()) {
+        migration1Applied = true;
       }
+      stmt.free();
+    } catch (e) {
+      // Table might not exist yet, that's ok
+    }
+    
+    if (!migration1Applied) {
+      console.log('🔄 Running migration 1: Add cancellation_reason column');
+      try {
+        db.run(`ALTER TABLE orders ADD COLUMN cancellation_reason TEXT`);
+        db.run(`INSERT INTO schema_version (version) VALUES (1)`);
+        console.log('✅ Migration 1 completed successfully');
+      } catch (e) {
+        // Check if error is because column already exists
+        if (e.message.includes('duplicate column name')) {
+          console.log('✅ Migration 1 skipped: column already exists');
+          try {
+            db.run(`INSERT OR IGNORE INTO schema_version (version) VALUES (1)`);
+          } catch (insertErr) {
+            // Ignore insert errors
+          }
+        } else {
+          console.error('❌ Migration 1 failed:', e.message);
+          throw e;
+        }
+      }
+    } else {
+      console.log('✅ Migration 1 already applied');
     }
 
     db.run(`
