@@ -6,6 +6,7 @@ import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
 import Orders from './pages/Orders';
 import OrderDetail from './pages/OrderDetail';
+import CancelInsights from './pages/CancelInsights';
 import AdminPanel from './pages/AdminPanel';
 import Settings from './pages/Settings';
 
@@ -30,6 +31,7 @@ function AppRoutes() {
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="orders" element={<Orders />} />
         <Route path="orders/:id" element={<OrderDetail />} />
+        <Route path="cancel-insights" element={<CancelInsights />} />
         <Route path="admin" element={<ProtectedRoute adminOnly><AdminPanel /></ProtectedRoute>} />
         <Route path="settings" element={<Settings />} />
       </Route>

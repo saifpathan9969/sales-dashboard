@@ -141,5 +141,49 @@ router.get('/top-customers', authenticate, (req, res) => {
   }
 });
 
+// GET /api/dashboard/cancellation-rates
+router.get('/cancellation-rates', authenticate, (req, res) => {
+  try {
+    const { date_from, date_to } = req.query;
+    let where = '1=1';
+    const params = [];
+    if (date_from) { where += ' AND order_date >= ?'; params.push(date_from); }
+    if (date_to) { where += ' AND order_date <= ?'; params.push(date_to); }
+
+    const ordersTable = getOrdersTableExpr(date_from, date_to);
+
+    const stats = queryOne(`
+      SELECT 
+        COUNT(*) as total_orders, 
+        COUNT(CASE WHEN status = 'Cancelled' THEN 1 END) as cancelled_orders,
+        COALESCE(SUM(CASE WHEN status = 'Cancelled' THEN order_value ELSE 0 END), 0) as revenue_loss
+      FROM ${ordersTable} WHERE ${where}
+    `, params);
+
+    const categoryCancellations = queryAll(`
+      SELECT category, COUNT(*) as cancelled_count
+      FROM ${ordersTable} WHERE ${where} AND status = 'Cancelled'
+      GROUP BY category ORDER BY cancelled_count DESC
+    `, params);
+
+    const reasonDistribution = queryAll(`
+      SELECT COALESCE(cancellation_reason, 'Unspecified') as reason, COUNT(*) as count
+      FROM ${ordersTable} WHERE ${where} AND status = 'Cancelled'
+      GROUP BY reason ORDER BY count DESC
+    `, params);
+
+    res.json({
+      total_orders: stats.total_orders,
+      cancelled_orders: stats.cancelled_orders,
+      revenue_loss: stats.revenue_loss,
+      cancellation_rate: stats.total_orders > 0 ? (stats.cancelled_orders / stats.total_orders) * 100 : 0,
+      categories: categoryCancellations,
+      reasons: reasonDistribution
+    });
+  } catch (err) {
+    res.status(500).json({ error: 'Server error: ' + err.message });
+  }
+});
+
 module.exports = router;
 

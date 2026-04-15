@@ -5,6 +5,7 @@ import { useAuth } from '../context/AuthContext';
 const navItems = [
   { path: '/dashboard', label: 'Dashboard', icon: '📊' },
   { path: '/orders', label: 'Orders', icon: '📦' },
+  { path: '/cancel-insights', label: 'Behaviour & Analytics', icon: '📉' },
 ];
 
 const adminItems = [
@@ -18,6 +19,7 @@ const bottomItems = [
 const pageNames = {
   '/dashboard': 'Dashboard Overview',
   '/orders': 'Orders Management',
+  '/cancel-insights': 'Cancellation Behaviour Analytics',
   '/admin': 'Admin Panel',
   '/settings': 'Settings',
 };

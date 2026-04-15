@@ -34,6 +34,16 @@ function initDb() {
     `);
     
     db.run(`
+      CREATE TABLE IF NOT EXISTS customers (
+        customer_id INTEGER PRIMARY KEY AUTOINCREMENT,
+        customer_name TEXT NOT NULL,
+        user_behavior_type TEXT,
+        region TEXT,
+        created_at TEXT DEFAULT (datetime('now'))
+      )
+    `);
+    
+    db.run(`
       CREATE TABLE IF NOT EXISTS orders (
         order_id TEXT PRIMARY KEY,
         customer_name TEXT NOT NULL,
@@ -44,9 +54,22 @@ function initDb() {
         payment_method TEXT NOT NULL,
         region TEXT NOT NULL,
         status TEXT NOT NULL DEFAULT 'Pending',
+        delivery_time INTEGER,
+        cancellation_reason TEXT,
         created_by INTEGER,
         created_at TEXT DEFAULT (datetime('now')),
         updated_at TEXT DEFAULT (datetime('now'))
+      )
+    `);
+
+    db.run(`
+      CREATE TABLE IF NOT EXISTS behavioral_logs (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        session_id TEXT NOT NULL,
+        action TEXT NOT NULL,
+        hesitation_score REAL,
+        details TEXT,
+        created_at TEXT DEFAULT (datetime('now'))
       )
     `);
     
