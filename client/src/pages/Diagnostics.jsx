@@ -12,7 +12,7 @@ export default function Diagnostics() {
     setLoading(true);
     try {
       const res = await api.get('/diagnostics/schema');
-      setSchemaResult(res.data);
+      setSchemaResult(res);
     } catch (err) {
       setSchemaResult({ error: err.message });
     }
@@ -23,7 +23,7 @@ export default function Diagnostics() {
     setLoading(true);
     try {
       const res = await api.get('/diagnostics/test-query');
-      setQueryResult(res.data);
+      setQueryResult(res);
     } catch (err) {
       setQueryResult({ error: err.message });
     }
@@ -34,7 +34,7 @@ export default function Diagnostics() {
     setLoading(true);
     try {
       const res = await api.get('/diagnostics/orders-count');
-      setCountResult(res.data);
+      setCountResult(res);
     } catch (err) {
       setCountResult({ error: err.message });
     }
