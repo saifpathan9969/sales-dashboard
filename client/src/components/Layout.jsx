@@ -5,7 +5,8 @@ import { useAuth } from '../context/AuthContext';
 const navItems = [
   { path: '/dashboard', label: 'Dashboard', icon: '📊' },
   { path: '/orders', label: 'Orders', icon: '📦' },
-  { path: '/cancel-insights', label: 'Behaviour & Analytics', icon: '📉' },
+  { path: '/cancel-insights', label: 'Business Analytics', icon: '📉' },
+  { path: '/behavioral-insights', label: 'Live Insights', icon: '👁️' },
 ];
 
 const adminItems = [
@@ -21,7 +22,8 @@ const bottomItems = [
 const pageNames = {
   '/dashboard': 'Dashboard Overview',
   '/orders': 'Orders Management',
-  '/cancel-insights': 'Cancellation Behaviour Analytics',
+  '/cancel-insights': 'Cancellation Analytics',
+  '/behavioral-insights': 'Live Behavioral Insights',
   '/diagnostics': 'Database Diagnostics',
   '/simulator': 'Behavioral Simulation Engine',
   '/admin': 'Admin Panel',

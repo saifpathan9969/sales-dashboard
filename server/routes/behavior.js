@@ -236,4 +236,62 @@ router.get('/recommendations/:session_id', (req, res) => {
   }
 });
 
+// GET /api/behavior/active-sessions
+router.get('/active-sessions', (req, res) => {
+  try {
+    const logs = queryAll(`SELECT * FROM behavioral_logs ORDER BY created_at DESC LIMIT 1000`);
+    
+    const sessionsMap = {};
+    for (const log of logs) {
+        if (!sessionsMap[log.session_id]) {
+           sessionsMap[log.session_id] = {
+               session_id: log.session_id,
+               last_seen: log.created_at,
+               first_seen: log.created_at,
+               max_hesitation: log.hesitation_score || 0,
+               actions_count: 0,
+               cart_events: 0,
+               latest_action: log.action
+           };
+        } else {
+           sessionsMap[log.session_id].first_seen = log.created_at; 
+        }
+        
+        sessionsMap[log.session_id].actions_count += 1;
+        sessionsMap[log.session_id].max_hesitation = Math.max(sessionsMap[log.session_id].max_hesitation, log.hesitation_score || 0);
+        
+        if (log.action === 'click_add_to_cart' || log.action === 'checkout_started' || log.action === 'purchase_complete') {
+           sessionsMap[log.session_id].cart_events += 1;
+        }
+    }
+    
+    const activeSessions = Object.values(sessionsMap).map(s => {
+        let prediction = 'Window Shopper';
+        if (s.cart_events > 0 && s.max_hesitation < 3) prediction = 'Likely to BUY';
+        else if (s.max_hesitation > 5) prediction = 'Likely to LEAVE';
+        
+        let intervention = 'None Recommended';
+        if (prediction === 'Likely to BUY') intervention = 'Urgency Banner (Fast Checkout)';
+        if (prediction === 'Likely to LEAVE') intervention = '10% Discount Offer + Trust Badges';
+        
+        s.prediction = prediction;
+        s.intervention = intervention;
+        
+        // Clean up some date math for lifetime
+        const start = new Date(s.first_seen + 'Z').getTime();
+        const end = new Date(s.last_seen + 'Z').getTime();
+        s.lifetime_secs = isNaN(start) || isNaN(end) ? 0 : Math.max(0, Math.floor((end - start)/1000));
+        
+        return s;
+    });
+    
+    // Sort logically
+    activeSessions.sort((a, b) => new Date(b.last_seen) - new Date(a.last_seen));
+
+    res.json({ data: activeSessions });
+  } catch (err) {
+    res.status(500).json({ error: 'Server error: ' + err.message });
+  }
+});
+
 module.exports = router;

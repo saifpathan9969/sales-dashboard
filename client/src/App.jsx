@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard';
 import Orders from './pages/Orders';
 import OrderDetail from './pages/OrderDetail';
 import CancelInsights from './pages/CancelInsights';
+import BehavioralInsights from './pages/BehavioralInsights';
 import AdminPanel from './pages/AdminPanel';
 import Settings from './pages/Settings';
 import Simulator from './pages/Simulator';
@@ -34,6 +35,7 @@ function AppRoutes() {
         <Route path="orders" element={<Orders />} />
         <Route path="orders/:id" element={<OrderDetail />} />
         <Route path="cancel-insights" element={<CancelInsights />} />
+        <Route path="behavioral-insights" element={<BehavioralInsights />} />
         <Route path="diagnostics" element={<ProtectedRoute adminOnly><Diagnostics /></ProtectedRoute>} />
         <Route path="simulator" element={<ProtectedRoute adminOnly><Simulator /></ProtectedRoute>} />
         <Route path="admin" element={<ProtectedRoute adminOnly><AdminPanel /></ProtectedRoute>} />
