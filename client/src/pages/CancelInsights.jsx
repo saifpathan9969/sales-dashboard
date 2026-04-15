@@ -56,9 +56,8 @@ export default function CancelInsights() {
   console.log('Has reasons?', data.reasons && data.reasons.length > 0);
   console.log('Has categories?', data.categories && data.categories.length > 0);
 
-  // Filter out "Unspecified" if it's the only reason (means no real cancellation reasons exist)
-  const hasRealReasons = data.reasons && data.reasons.length > 0 && 
-    !(data.reasons.length === 1 && data.reasons[0].reason === 'Unspecified');
+  // Show charts if there are ANY reasons (including Unspecified) or categories
+  const hasRealReasons = data.reasons && data.reasons.length > 0;
   const hasCategories = data.categories && data.categories.length > 0;
   
   console.log('hasRealReasons:', hasRealReasons);
