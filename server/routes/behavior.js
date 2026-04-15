@@ -19,29 +19,28 @@ router.post('/track', (req, res) => {
       [session_id, action, hesitation_score || 0, JSON.stringify(details || {})]
     );
 
-    // Predict if user will buy or leave based on rule
-    // Hesitation Detection: hesitation_score > 5
+    // Purchase Prediction & Hesitation Detection
     let prediction = 'Unknown';
     let intervention = null;
     
-    if (hesitation_score > 5) {
-      prediction = 'Likely to LEAVE';
-      intervention = {
-        type: 'discount_popup',
-        message: 'Get 10% off if you purchase now!',
-        badge: 'Trusted Seller'
-      };
-    } else if (action === 'click_add_to_cart' && hesitation_score < 2) {
+    // Logic: If user is likely to BUY (low hesitation + intent driven)
+    if ((action === 'click_add_to_cart' && hesitation_score < 3) || action === 'checkout_started') {
       prediction = 'Likely to BUY';
       intervention = {
-        type: 'urgency_banner',
-        message: 'Hurry! Only 2 items left in stock.'
+        type: 'likely_to_buy',
+        message: 'Hurry! Only 2 items left in stock.',
+        fastCheckout: true,
+        urgency: true
       };
-    } else if (action === 'cart_idle') {
-      prediction = 'Cart Abandoner';
+    } 
+    // Logic: If user is likely to LEAVE (high hesitation > 5, or idling)
+    else if (hesitation_score > 5 || action === 'cart_idle') {
+      prediction = 'Likely to LEAVE';
       intervention = {
-        type: 'reminder',
-        message: 'Your items are waiting for you...'
+        type: 'likely_to_leave',
+        message: 'Wait! Don\'t miss out. Get 10% off your purchase right now.',
+        discount: '10% OFF',
+        trustBadges: ['⭐️⭐️⭐️⭐️⭐️ 4.9/5 Rating', '🔒 Secure SSL Checkout']
       };
     }
 
@@ -166,6 +165,73 @@ router.get('/generate-bulk', (req, res) => {
     
     res.json({ message: `Auto-pilot finished! Simulated ${generatedSessions} sessions with diverse personas.` });
   } catch(e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
+// GET /api/behavior/recommendations/:session_id
+router.get('/recommendations/:session_id', (req, res) => {
+  try {
+    const { session_id } = req.params;
+    
+    // Parse the entire behavioral session to find highest hesitation logic
+    const logs = queryAll(`SELECT action, hesitation_score, details FROM behavioral_logs WHERE session_id = ? ORDER BY created_at DESC LIMIT 50`, [session_id]);
+    
+    let lastViewedProduct = null;
+    let maxHesitation = 0;
+    
+    // Iterate through behavior logs to find the product they hesitated on the most
+    for (const log of logs) {
+      if (!log.details) continue;
+      const parsed = JSON.parse(log.details);
+      
+      let discoveredProduct = parsed.item;
+      if (!discoveredProduct && parsed.path && parsed.path.includes('/product/')) {
+         const idPart = parsed.path.split('/product/')[1];
+         if (!isNaN(parseInt(idPart))) discoveredProduct = parseInt(idPart);
+      }
+      
+      if (discoveredProduct) {
+         if (!lastViewedProduct) lastViewedProduct = discoveredProduct;
+         
+         if (log.hesitation_score > maxHesitation) {
+            maxHesitation = log.hesitation_score;
+            lastViewedProduct = discoveredProduct; // Set the highest hesitated item as the anchor
+         }
+      }
+    }
+    
+    const allProducts = [
+      { id: 1, name: 'Wireless Noise-Canceling Headphones', category: 'Electronics', price: 299.99, image: '🎧' },
+      { id: 2, name: 'Ergonomic Office Chair', category: 'Furniture', price: 199.99, image: '🪑' },
+      { id: 3, name: 'Smart Fitness Watch', category: 'Electronics', price: 149.99, image: '⌚' },
+      { id: 4, name: 'Mechanical Keyboard Pro', category: 'Accessories', price: 129.99, image: '⌨️' },
+      { id: 5, name: 'Ultra HD 4K Monitor', category: 'Electronics', price: 349.99, image: '🖥️' },
+      { id: 6, name: 'Premium Coffee Maker', category: 'Appliances', price: 89.99, image: '☕' }
+    ];
+    
+    let recommended = [];
+    if (lastViewedProduct) {
+       const productObj = allProducts.find(p => p.name === lastViewedProduct || p.id === lastViewedProduct);
+       
+       if (productObj) {
+           if (maxHesitation > 4) {
+               // IF HIGH HESITATION: Recommend items that are cheaper (either in same category or overall)
+               recommended = allProducts.filter(p => p.price < productObj.price && p.id !== productObj.id);
+           } else {
+               // IF LOW HESITATION: Recommend complementary items from the same category
+               recommended = allProducts.filter(p => p.category === productObj.category && p.id !== productObj.id);
+           }
+       }
+    }
+    
+    if (recommended.length === 0) {
+        // Fallback trending generic items
+        recommended = [allProducts[0], allProducts[2]]; 
+    }
+    
+    res.json({ recommendations: recommended });
+  } catch (e) {
     res.status(500).json({ error: e.message });
   }
 });
