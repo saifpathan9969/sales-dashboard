@@ -64,7 +64,14 @@ router.get('/logs', (req, res) => {
 // GET /api/behavior/generate-bulk
 router.get('/generate-bulk', (req, res) => {
   try {
-    const reasons = ['Price change', 'Found cheaper product', 'Delivery delay', 'Payment failure', 'Changed mind', 'Product out of stock'];
+    const categoryReasons = {
+      'Electronics': ['Found better specs elsewhere', 'Wait time too long for latest model', 'Product out of stock', 'Price too high'],
+      'Furniture': ['Shipping costs too high', 'Dimensions do not fit', 'Delivery delayed', 'Fabric/Material concern'],
+      'Accessories': ['Changed mind', 'Found a cheaper alternative', 'Not compatible with my device'],
+      'Appliances': ['High installation cost', 'Found a higher capacity model', 'Payment failure', 'Changed mind']
+    };
+    const defaultReasons = ['Price change', 'Found cheaper product', 'Delivery delay', 'Payment failure', 'Changed mind', 'Product out of stock'];
+
     const products = [
       { name: 'Wireless Noise-Canceling Headphones', category: 'Electronics', price: 299.99 },
       { name: 'Ergonomic Office Chair', category: 'Furniture', price: 199.99 },
@@ -108,13 +115,16 @@ router.get('/generate-bulk', (req, res) => {
         };
 
         const createOrder = (status, isCancel) => {
+           const specificReasons = categoryReasons[product.category] || defaultReasons;
+           const reason = isCancel ? specificReasons[Math.floor(Math.random() * specificReasons.length)] : null;
+           
            execute(
              `INSERT INTO orders (order_id, customer_name, product_name, category, order_value, order_date, payment_method, region, status, delivery_time, cancellation_reason, created_at, updated_at)
               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
              [
                'SIM-' + Math.floor(Math.random() * 1000000), 'Auto User ' + i, product.name, product.category, product.price,
                generateTimestamp(daysAgo, timeOffset), 'Credit Card', 'US', status, 
-               Math.floor(Math.random()*7)+1, isCancel ? reasons[Math.floor(Math.random()*reasons.length)] : null,
+               Math.floor(Math.random()*7)+1, reason,
                generateTimestamp(daysAgo, timeOffset), generateTimestamp(daysAgo, timeOffset)
              ]
            );
