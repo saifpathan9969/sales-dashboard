@@ -152,6 +152,8 @@ router.get('/cancellation-rates', authenticate, (req, res) => {
 
     const ordersTable = getOrdersTableExpr(date_from, date_to);
 
+    console.log('[cancellation-rates] Querying with ordersTable:', ordersTable === 'orders' ? 'direct table' : 'subquery');
+
     const stats = queryOne(`
       SELECT 
         COUNT(*) as total_orders, 
@@ -160,17 +162,23 @@ router.get('/cancellation-rates', authenticate, (req, res) => {
       FROM ${ordersTable} WHERE ${where}
     `, params);
 
+    console.log('[cancellation-rates] Stats query successful:', stats);
+
     const categoryCancellations = queryAll(`
       SELECT category, COUNT(*) as cancelled_count
       FROM ${ordersTable} WHERE ${where} AND status = 'Cancelled'
       GROUP BY category ORDER BY cancelled_count DESC
     `, params);
 
+    console.log('[cancellation-rates] Category query successful, found', categoryCancellations.length, 'categories');
+
     const reasonDistribution = queryAll(`
       SELECT COALESCE(cancellation_reason, 'Unspecified') as reason, COUNT(*) as count
       FROM ${ordersTable} WHERE ${where} AND status = 'Cancelled'
       GROUP BY reason ORDER BY count DESC
     `, params);
+
+    console.log('[cancellation-rates] Reason query successful, found', reasonDistribution.length, 'reasons');
 
     res.json({
       total_orders: stats.total_orders,
@@ -181,7 +189,12 @@ router.get('/cancellation-rates', authenticate, (req, res) => {
       reasons: reasonDistribution
     });
   } catch (err) {
-    res.status(500).json({ error: 'Server error: ' + err.message });
+    console.error('[cancellation-rates] ERROR:', err.message);
+    console.error('[cancellation-rates] Stack:', err.stack);
+    res.status(500).json({ 
+      error: 'Server error: ' + err.message,
+      details: process.env.NODE_ENV === 'production' ? undefined : err.stack
+    });
   }
 });
 
