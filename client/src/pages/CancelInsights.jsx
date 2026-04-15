@@ -48,10 +48,21 @@ export default function CancelInsights() {
   if (loading) return <div className="state-container"><div className="spinner" /></div>;
   if (!data) return <div className="state-container"><p className="state-title text-danger">Failed to load data</p></div>;
 
+  // Debug: Log data structure
+  console.log('=== CANCEL INSIGHTS DEBUG ===');
+  console.log('Data object:', data);
+  console.log('Reasons array:', data.reasons);
+  console.log('Categories array:', data.categories);
+  console.log('Has reasons?', data.reasons && data.reasons.length > 0);
+  console.log('Has categories?', data.categories && data.categories.length > 0);
+
   // Filter out "Unspecified" if it's the only reason (means no real cancellation reasons exist)
   const hasRealReasons = data.reasons && data.reasons.length > 0 && 
     !(data.reasons.length === 1 && data.reasons[0].reason === 'Unspecified');
   const hasCategories = data.categories && data.categories.length > 0;
+  
+  console.log('hasRealReasons:', hasRealReasons);
+  console.log('hasCategories:', hasCategories);
 
   return (
     <div className="fade-in">
@@ -99,6 +110,29 @@ export default function CancelInsights() {
         </div>
         <button className="btn btn-primary" onClick={applyFilters}>Apply Filters</button>
         <button className="btn btn-secondary" onClick={resetFilters}>Reset</button>
+      </div>
+
+      {/* DEBUG PANEL - Remove after testing */}
+      <div style={{ 
+        margin: '20px 0', 
+        padding: '15px', 
+        background: 'rgba(255, 0, 0, 0.1)', 
+        border: '2px solid red', 
+        borderRadius: '8px',
+        color: 'white'
+      }}>
+        <h3 style={{ marginBottom: '10px' }}>🔍 DEBUG INFO (Remove this after testing)</h3>
+        <pre style={{ fontSize: '12px', overflow: 'auto' }}>
+          {JSON.stringify({
+            hasData: !!data,
+            hasRealReasons,
+            hasCategories,
+            reasonsCount: data?.reasons?.length || 0,
+            categoriesCount: data?.categories?.length || 0,
+            reasons: data?.reasons || [],
+            categories: data?.categories || []
+          }, null, 2)}
+        </pre>
       </div>
       
       {/* KPIs */}
