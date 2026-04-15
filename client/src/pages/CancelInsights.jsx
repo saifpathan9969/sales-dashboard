@@ -158,10 +158,14 @@ export default function CancelInsights() {
 
       <div className="grid grid-cols-2 gap-md">
         {/* Reasons Chart */}
-        <div className="card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', minHeight: '400px' }}>
+        <div className="card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', minHeight: '400px', border: '3px solid yellow' }}>
           <h2 style={{ fontSize: '1.1rem', marginBottom: '1.5rem', fontWeight: 600 }}>Reasons for Cancellation</h2>
+          <div style={{ background: 'rgba(255,255,0,0.1)', padding: '10px', marginBottom: '10px' }}>
+            DEBUG: hasRealReasons = {hasRealReasons ? 'TRUE' : 'FALSE'}
+          </div>
           {hasRealReasons ? (
-            <div style={{ flex: 1, minHeight: '300px' }}>
+            <div style={{ flex: 1, minHeight: '300px', border: '2px solid green', background: 'rgba(0,255,0,0.05)' }}>
+              <p style={{ color: 'lime' }}>CHART CONTAINER IS RENDERING</p>
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
@@ -184,7 +188,8 @@ export default function CancelInsights() {
               </ResponsiveContainer>
             </div>
           ) : (
-            <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '12px' }}>
+            <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '12px', border: '2px solid red' }}>
+              <p style={{ color: 'red' }}>EMPTY STATE IS RENDERING</p>
               <div style={{ fontSize: '3rem', opacity: 0.3 }}>📊</div>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>No cancellation reason data available</p>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>Run the simulator to generate sample data</p>
@@ -193,10 +198,14 @@ export default function CancelInsights() {
         </div>
 
         {/* Categories Chart */}
-        <div className="card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', minHeight: '400px' }}>
+        <div className="card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', minHeight: '400px', border: '3px solid yellow' }}>
           <h2 style={{ fontSize: '1.1rem', marginBottom: '1.5rem', fontWeight: 600 }}>Cancellations by Category</h2>
+          <div style={{ background: 'rgba(255,255,0,0.1)', padding: '10px', marginBottom: '10px' }}>
+            DEBUG: hasCategories = {hasCategories ? 'TRUE' : 'FALSE'}
+          </div>
           {hasCategories ? (
-            <div style={{ flex: 1, minHeight: '300px' }}>
+            <div style={{ flex: 1, minHeight: '300px', border: '2px solid green', background: 'rgba(0,255,0,0.05)' }}>
+              <p style={{ color: 'lime' }}>CHART CONTAINER IS RENDERING</p>
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={data.categories} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#2c2c30" horizontal={false} />
@@ -212,7 +221,8 @@ export default function CancelInsights() {
               </ResponsiveContainer>
             </div>
           ) : (
-            <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '12px' }}>
+            <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '12px', border: '2px solid red' }}>
+              <p style={{ color: 'red' }}>EMPTY STATE IS RENDERING</p>
               <div style={{ fontSize: '3rem', opacity: 0.3 }}>📊</div>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>No category cancellation data available</p>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>Run the simulator to generate sample data</p>
