@@ -45,4 +45,12 @@ export const api = {
   updateUserRole: (id, role) => request(`/admin/users/${id}/role`, { method: 'PUT', body: JSON.stringify({ role }) }),
   deleteUser: (id) => request(`/admin/users/${id}`, { method: 'DELETE' }),
   createUser: (data) => request('/admin/users', { method: 'POST', body: JSON.stringify(data) }),
+
+  // Diagnostics
+  getDiagnosticsSchema: () => request('/diagnostics/schema'),
+  getDiagnosticsTestQuery: () => request('/diagnostics/test-query'),
+  getDiagnosticsOrdersCount: () => request('/diagnostics/orders-count'),
+  
+  // Generic get method for flexibility
+  get: (endpoint) => request(endpoint),
 };
