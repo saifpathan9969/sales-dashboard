@@ -50,7 +50,7 @@ export default function CancelInsights() {
         </div>
         <div className="card">
            <div style={{ display:'flex', height:'100%', alignItems:'center', justifyContent:'center' }}>
-             <button onClick={() => window.open('http://localhost:5174', '_blank')} className="btn btn-primary">
+             <button onClick={() => window.location.href = '/simulator'} className="btn btn-primary">
                Launch Simulator
              </button>
            </div>
