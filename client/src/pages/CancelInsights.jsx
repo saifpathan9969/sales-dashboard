@@ -165,6 +165,7 @@ export default function CancelInsights() {
           {hasRealReasons ? (
             <div style={{ flex: 1, minHeight: '300px', border: '2px solid green', background: 'rgba(0,255,0,0.05)' }}>
               <p style={{ color: 'lime' }}>CHART CONTAINER IS RENDERING</p>
+              <p style={{ color: 'yellow', fontSize: '12px' }}>Data: {JSON.stringify(data.reasons)}</p>
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
@@ -174,14 +175,15 @@ export default function CancelInsights() {
                     cx="50%"
                     cy="50%"
                     outerRadius={100}
+                    fill="#8884d8"
                     label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
-                    labelLine={false}
+                    labelLine={true}
                   >
                     {data.reasons.map((entry, index) => (
-                      <Cell key={index} fill={COLORS[index % COLORS.length]} />
+                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                     ))}
                   </Pie>
-                  <RechartsTooltip cursor={{ fill: 'rgba(255,255,255,0.05)' }} contentStyle={{ backgroundColor: '#18191b', border: '1px solid #2c2c30', borderRadius: '8px' }} />
+                  <RechartsTooltip />
                   <Legend />
                 </PieChart>
               </ResponsiveContainer>
@@ -205,15 +207,16 @@ export default function CancelInsights() {
           {hasCategories ? (
             <div style={{ flex: 1, minHeight: '300px', border: '2px solid green', background: 'rgba(0,255,0,0.05)' }}>
               <p style={{ color: 'lime' }}>CHART CONTAINER IS RENDERING</p>
+              <p style={{ color: 'yellow', fontSize: '12px' }}>Data: {JSON.stringify(data.categories)}</p>
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={data.categories} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#2c2c30" horizontal={false} />
                   <XAxis type="number" stroke="#8e8e93" />
                   <YAxis dataKey="category" type="category" stroke="#8e8e93" width={100} />
-                  <RechartsTooltip cursor={{ fill: 'rgba(255,255,255,0.05)' }} contentStyle={{ backgroundColor: '#18191b', border: '1px solid #2c2c30', borderRadius: '8px' }} />
+                  <RechartsTooltip />
                   <Bar dataKey="cancelled_count" fill="#e56b6f" radius={[0, 4, 4, 0]}>
                     {data.categories.map((entry, index) => (
-                      <Cell key={index} fill={COLORS[index % COLORS.length]} />
+                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                     ))}
                   </Bar>
                 </BarChart>
