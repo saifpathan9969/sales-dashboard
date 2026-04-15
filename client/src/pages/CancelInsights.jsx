@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip as RechartsTooltip, Legend, BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts';
 
 const COLORS = ['#fca311', '#e56b6f', '#eac435', '#3f88c5', '#032b43', '#8ac926', '#2a9d8f'];
 
@@ -27,7 +26,6 @@ export default function CancelInsights() {
       if (currentFilters.category) params.append('category', currentFilters.category);
       
       const res = await api.get(`/dashboard/cancellation-rates?${params.toString()}`);
-      console.log('CancelInsights data received:', res);
       setData(res);
     } catch (err) {
       console.error('CancelInsights error:', err);
@@ -48,20 +46,8 @@ export default function CancelInsights() {
   if (loading) return <div className="state-container"><div className="spinner" /></div>;
   if (!data) return <div className="state-container"><p className="state-title text-danger">Failed to load data</p></div>;
 
-  // Debug: Log data structure
-  console.log('=== CANCEL INSIGHTS DEBUG ===');
-  console.log('Data object:', data);
-  console.log('Reasons array:', data.reasons);
-  console.log('Categories array:', data.categories);
-  console.log('Has reasons?', data.reasons && data.reasons.length > 0);
-  console.log('Has categories?', data.categories && data.categories.length > 0);
-
-  // Show charts if there are ANY reasons (including Unspecified) or categories
   const hasRealReasons = data.reasons && data.reasons.length > 0;
   const hasCategories = data.categories && data.categories.length > 0;
-  
-  console.log('hasRealReasons:', hasRealReasons);
-  console.log('hasCategories:', hasCategories);
 
   return (
     <div className="fade-in">
@@ -110,29 +96,6 @@ export default function CancelInsights() {
         <button className="btn btn-primary" onClick={applyFilters}>Apply Filters</button>
         <button className="btn btn-secondary" onClick={resetFilters}>Reset</button>
       </div>
-
-      {/* DEBUG PANEL - Remove after testing */}
-      <div style={{ 
-        margin: '20px 0', 
-        padding: '15px', 
-        background: 'rgba(255, 0, 0, 0.1)', 
-        border: '2px solid red', 
-        borderRadius: '8px',
-        color: 'white'
-      }}>
-        <h3 style={{ marginBottom: '10px' }}>🔍 DEBUG INFO (Remove this after testing)</h3>
-        <pre style={{ fontSize: '12px', overflow: 'auto' }}>
-          {JSON.stringify({
-            hasData: !!data,
-            hasRealReasons,
-            hasCategories,
-            reasonsCount: data?.reasons?.length || 0,
-            categoriesCount: data?.categories?.length || 0,
-            reasons: data?.reasons || [],
-            categories: data?.categories || []
-          }, null, 2)}
-        </pre>
-      </div>
       
       {/* KPIs */}
       <div className="grid grid-cols-4 gap-md" style={{ marginBottom: '2rem' }}>
@@ -157,69 +120,34 @@ export default function CancelInsights() {
 
       <div className="grid grid-cols-2 gap-md">
         {/* Reasons Chart */}
-        <div className="card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', minHeight: '400px', border: '3px solid yellow' }}>
+        <div className="card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', minHeight: '400px' }}>
           <h2 style={{ fontSize: '1.1rem', marginBottom: '1.5rem', fontWeight: 600 }}>Reasons for Cancellation</h2>
-          <div style={{ background: 'rgba(255,255,0,0.1)', padding: '10px', marginBottom: '10px' }}>
-            DEBUG: hasRealReasons = {hasRealReasons ? 'TRUE' : 'FALSE'}
-          </div>
           {hasRealReasons ? (
-            <div style={{ flex: 1, minHeight: '300px', border: '2px solid green', background: 'rgba(0,255,0,0.05)', padding: '20px' }}>
-              <p style={{ color: 'lime', marginBottom: '10px' }}>CHART CONTAINER IS RENDERING</p>
-              <p style={{ color: 'yellow', fontSize: '12px', marginBottom: '15px' }}>Data: {JSON.stringify(data.reasons)}</p>
-              
-              {/* Simple CSS-based visualization as fallback */}
-              <div style={{ marginTop: '20px' }}>
-                {data.reasons.map((item, index) => {
-                  const total = data.reasons.reduce((sum, r) => sum + r.count, 0);
-                  const percentage = ((item.count / total) * 100).toFixed(1);
-                  return (
-                    <div key={index} style={{ marginBottom: '15px' }}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px', color: '#fff' }}>
-                        <span>{item.reason}</span>
-                        <span>{item.count} ({percentage}%)</span>
-                      </div>
-                      <div style={{ width: '100%', height: '20px', background: '#2c2c30', borderRadius: '10px', overflow: 'hidden' }}>
-                        <div style={{ 
-                          width: `${percentage}%`, 
-                          height: '100%', 
-                          background: COLORS[index % COLORS.length],
-                          transition: 'width 0.3s ease'
-                        }} />
-                      </div>
+            <div style={{ flex: 1 }}>
+              {data.reasons.map((item, index) => {
+                const total = data.reasons.reduce((sum, r) => sum + r.count, 0);
+                const percentage = ((item.count / total) * 100).toFixed(1);
+                return (
+                  <div key={index} style={{ marginBottom: '18px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px', fontSize: '0.9rem' }}>
+                      <span style={{ color: 'var(--text-primary)', fontWeight: 500 }}>{item.reason}</span>
+                      <span style={{ color: 'var(--text-secondary)' }}>{item.count} ({percentage}%)</span>
                     </div>
-                  );
-                })}
-              </div>
-              
-              {/* Recharts attempt */}
-              <div style={{ marginTop: '30px', border: '1px dashed yellow', padding: '10px' }}>
-                <p style={{ color: 'yellow', fontSize: '11px' }}>Recharts PieChart below (if visible):</p>
-                <ResponsiveContainer width="100%" height={250}>
-                  <PieChart>
-                    <Pie
-                      data={data.reasons}
-                      dataKey="count"
-                      nameKey="reason"
-                      cx="50%"
-                      cy="50%"
-                      outerRadius={80}
-                      fill="#8884d8"
-                      label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
-                      labelLine={true}
-                    >
-                      {data.reasons.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                      ))}
-                    </Pie>
-                    <RechartsTooltip />
-                    <Legend />
-                  </PieChart>
-                </ResponsiveContainer>
-              </div>
+                    <div style={{ width: '100%', height: '24px', background: 'rgba(148, 163, 184, 0.1)', borderRadius: '12px', overflow: 'hidden' }}>
+                      <div style={{ 
+                        width: `${percentage}%`, 
+                        height: '100%', 
+                        background: COLORS[index % COLORS.length],
+                        transition: 'width 0.5s ease',
+                        borderRadius: '12px'
+                      }} />
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           ) : (
-            <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '12px', border: '2px solid red' }}>
-              <p style={{ color: 'red' }}>EMPTY STATE IS RENDERING</p>
+            <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '12px' }}>
               <div style={{ fontSize: '3rem', opacity: 0.3 }}>📊</div>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>No cancellation reason data available</p>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>Run the simulator to generate sample data</p>
@@ -228,61 +156,34 @@ export default function CancelInsights() {
         </div>
 
         {/* Categories Chart */}
-        <div className="card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', minHeight: '400px', border: '3px solid yellow' }}>
+        <div className="card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', minHeight: '400px' }}>
           <h2 style={{ fontSize: '1.1rem', marginBottom: '1.5rem', fontWeight: 600 }}>Cancellations by Category</h2>
-          <div style={{ background: 'rgba(255,255,0,0.1)', padding: '10px', marginBottom: '10px' }}>
-            DEBUG: hasCategories = {hasCategories ? 'TRUE' : 'FALSE'}
-          </div>
           {hasCategories ? (
-            <div style={{ flex: 1, minHeight: '300px', border: '2px solid green', background: 'rgba(0,255,0,0.05)', padding: '20px' }}>
-              <p style={{ color: 'lime', marginBottom: '10px' }}>CHART CONTAINER IS RENDERING</p>
-              <p style={{ color: 'yellow', fontSize: '12px', marginBottom: '15px' }}>Data: {JSON.stringify(data.categories)}</p>
-              
-              {/* Simple CSS-based visualization as fallback */}
-              <div style={{ marginTop: '20px' }}>
-                {data.categories.map((item, index) => {
-                  const maxCount = Math.max(...data.categories.map(c => c.cancelled_count));
-                  const percentage = ((item.cancelled_count / maxCount) * 100).toFixed(1);
-                  return (
-                    <div key={index} style={{ marginBottom: '15px' }}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px', color: '#fff' }}>
-                        <span>{item.category}</span>
-                        <span>{item.cancelled_count} cancelled</span>
-                      </div>
-                      <div style={{ width: '100%', height: '20px', background: '#2c2c30', borderRadius: '10px', overflow: 'hidden' }}>
-                        <div style={{ 
-                          width: `${percentage}%`, 
-                          height: '100%', 
-                          background: COLORS[index % COLORS.length],
-                          transition: 'width 0.3s ease'
-                        }} />
-                      </div>
+            <div style={{ flex: 1 }}>
+              {data.categories.map((item, index) => {
+                const maxCount = Math.max(...data.categories.map(c => c.cancelled_count));
+                const percentage = ((item.cancelled_count / maxCount) * 100).toFixed(1);
+                return (
+                  <div key={index} style={{ marginBottom: '18px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px', fontSize: '0.9rem' }}>
+                      <span style={{ color: 'var(--text-primary)', fontWeight: 500 }}>{item.category}</span>
+                      <span style={{ color: 'var(--text-secondary)' }}>{item.cancelled_count} cancelled</span>
                     </div>
-                  );
-                })}
-              </div>
-              
-              {/* Recharts attempt */}
-              <div style={{ marginTop: '30px', border: '1px dashed yellow', padding: '10px' }}>
-                <p style={{ color: 'yellow', fontSize: '11px' }}>Recharts BarChart below (if visible):</p>
-                <ResponsiveContainer width="100%" height={250}>
-                  <BarChart data={data.categories} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="#2c2c30" horizontal={false} />
-                    <XAxis type="number" stroke="#8e8e93" />
-                    <YAxis dataKey="category" type="category" stroke="#8e8e93" width={100} />
-                    <RechartsTooltip />
-                    <Bar dataKey="cancelled_count" fill="#e56b6f" radius={[0, 4, 4, 0]}>
-                      {data.categories.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                      ))}
-                    </Bar>
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
+                    <div style={{ width: '100%', height: '24px', background: 'rgba(148, 163, 184, 0.1)', borderRadius: '12px', overflow: 'hidden' }}>
+                      <div style={{ 
+                        width: `${percentage}%`, 
+                        height: '100%', 
+                        background: COLORS[index % COLORS.length],
+                        transition: 'width 0.5s ease',
+                        borderRadius: '12px'
+                      }} />
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           ) : (
-            <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '12px', border: '2px solid red' }}>
-              <p style={{ color: 'red' }}>EMPTY STATE IS RENDERING</p>
+            <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '12px' }}>
               <div style={{ fontSize: '3rem', opacity: 0.3 }}>📊</div>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>No category cancellation data available</p>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>Run the simulator to generate sample data</p>
