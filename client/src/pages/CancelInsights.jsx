@@ -17,15 +17,21 @@ export default function CancelInsights() {
     setLoading(true);
     try {
       const res = await api.get('/dashboard/cancellation-rates');
+      console.log('CancelInsights data received:', res);
       setData(res);
     } catch (err) {
-      console.error(err);
+      console.error('CancelInsights error:', err);
     }
     setLoading(false);
   };
 
   if (loading) return <div className="state-container"><div className="spinner" /></div>;
   if (!data) return <div className="state-container"><p className="state-title text-danger">Failed to load data</p></div>;
+
+  // Filter out "Unspecified" if it's the only reason (means no real cancellation reasons exist)
+  const hasRealReasons = data.reasons && data.reasons.length > 0 && 
+    !(data.reasons.length === 1 && data.reasons[0].reason === 'Unspecified');
+  const hasCategories = data.categories && data.categories.length > 0;
 
   return (
     <div className="fade-in">
@@ -59,9 +65,9 @@ export default function CancelInsights() {
 
       <div className="grid grid-cols-2 gap-md">
         {/* Reasons Chart */}
-        <div className="card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column' }}>
+        <div className="card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', minHeight: '400px' }}>
           <h2 style={{ fontSize: '1.1rem', marginBottom: '1.5rem', fontWeight: 600 }}>Reasons for Cancellation</h2>
-          {data.reasons.length > 0 ? (
+          {hasRealReasons ? (
             <div style={{ flex: 1, minHeight: '300px' }}>
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
@@ -85,14 +91,18 @@ export default function CancelInsights() {
               </ResponsiveContainer>
             </div>
           ) : (
-            <div className="state-container"><p className="state-title text-muted">No cancellation data available.</p></div>
+            <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '12px' }}>
+              <div style={{ fontSize: '3rem', opacity: 0.3 }}>📊</div>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>No cancellation reason data available</p>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>Run the simulator to generate sample data</p>
+            </div>
           )}
         </div>
 
         {/* Categories Chart */}
-        <div className="card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column' }}>
+        <div className="card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', minHeight: '400px' }}>
           <h2 style={{ fontSize: '1.1rem', marginBottom: '1.5rem', fontWeight: 600 }}>Cancellations by Category</h2>
-          {data.categories.length > 0 ? (
+          {hasCategories ? (
             <div style={{ flex: 1, minHeight: '300px' }}>
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={data.categories} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
@@ -109,7 +119,11 @@ export default function CancelInsights() {
               </ResponsiveContainer>
             </div>
           ) : (
-            <div className="state-container"><p className="state-title text-muted">No cancellation data available.</p></div>
+            <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '12px' }}>
+              <div style={{ fontSize: '3rem', opacity: 0.3 }}>📊</div>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>No category cancellation data available</p>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>Run the simulator to generate sample data</p>
+            </div>
           )}
         </div>
       </div>
