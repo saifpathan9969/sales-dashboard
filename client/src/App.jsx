@@ -10,6 +10,7 @@ import CancelInsights from './pages/CancelInsights';
 import AdminPanel from './pages/AdminPanel';
 import Settings from './pages/Settings';
 import Simulator from './pages/Simulator';
+import Diagnostics from './pages/Diagnostics';
 
 function ProtectedRoute({ children, adminOnly = false }) {
   const { user, loading } = useAuth();
@@ -33,6 +34,7 @@ function AppRoutes() {
         <Route path="orders" element={<Orders />} />
         <Route path="orders/:id" element={<OrderDetail />} />
         <Route path="cancel-insights" element={<CancelInsights />} />
+        <Route path="diagnostics" element={<ProtectedRoute adminOnly><Diagnostics /></ProtectedRoute>} />
         <Route path="simulator" element={<ProtectedRoute adminOnly><Simulator /></ProtectedRoute>} />
         <Route path="admin" element={<ProtectedRoute adminOnly><AdminPanel /></ProtectedRoute>} />
         <Route path="settings" element={<Settings />} />

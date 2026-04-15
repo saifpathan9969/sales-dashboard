@@ -9,6 +9,7 @@ const navItems = [
 ];
 
 const adminItems = [
+  { path: '/diagnostics', label: 'Diagnostics', icon: '🔧' },
   { path: '/simulator', label: 'Simulator', icon: '🎭' },
   { path: '/admin', label: 'Admin Panel', icon: '🛡️' },
 ];
@@ -21,6 +22,7 @@ const pageNames = {
   '/dashboard': 'Dashboard Overview',
   '/orders': 'Orders Management',
   '/cancel-insights': 'Cancellation Behaviour Analytics',
+  '/diagnostics': 'Database Diagnostics',
   '/simulator': 'Behavioral Simulation Engine',
   '/admin': 'Admin Panel',
   '/settings': 'Settings',
