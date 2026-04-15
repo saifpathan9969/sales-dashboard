@@ -17,7 +17,7 @@ export default function CancelInsights() {
     setLoading(true);
     try {
       const res = await api.get('/dashboard/cancellation-rates');
-      setData(res.data);
+      setData(res);
     } catch (err) {
       console.error(err);
     }
