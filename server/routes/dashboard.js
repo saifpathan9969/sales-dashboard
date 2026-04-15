@@ -15,7 +15,7 @@ const getOrdersTableExpr = (date_from, date_to) => {
         (ABS(CAST(order_value * 100 AS INTEGER)) + length(customer_name) + length(order_id)) % 
         MAX(CAST(julianday(${toStr}) - julianday(${fromStr}) AS INTEGER) + 1, 1)
       ) || ' days') AS order_date,
-      payment_method, region, status, created_by, created_at, updated_at
+      payment_method, region, status, cancellation_reason, created_by, created_at, updated_at
     FROM orders
   )`;
 };
